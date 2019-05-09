@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NICU Patient Tracking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="hidden" class="logged-in-user" value="">
+    <input type="hidden" class="selected-entry-id" value="">
+    <header role="banner">
+        <h1 class="title">NICU Patient Report</h1>
+    </header>
+    <section role="region" id="landing-page-info">
+        <div class="app-summary">
+            <h1>The NICU Patient Report application is for employees of the NICU to keep track of patients within their unit.</h1>
+            <h4>In order to get started either login or register an account to use this application.</h4>
+        </div>
+    </section>
+    <section role="region" id="login-form-section">
+        <div id="absoluteCenteredDiv">
+            <form class="login-form">
+                <div class="authentication-box">
+                    <h1>Login</h1>
+                    <input class="loginUsername greyText" name="username" type="text" placeholder="User Name" value="test" required>
+                    <input class="loginPassword greyText" name="password" type="password" placeholder="Password" value="123" required>
+                    <p>Username: test</p>
+                    <p>Password: 123</p>
+                    <button class="button" id="login">Login</button>
+                </div>
+            </form>
+            <div class="loginRegister">
+                <p>Don't have an account? <a id="sign-up-link" href="#">Register here.</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section role="region" id="sign-up-form" class="hidden">
+        <div id="absoluteCenteredDiv">
+            <form class="sign-up-form">
+                <div class="authentication-box">
+                    <h1>Sign Up</h1>
+                    <input class="registerUsername greyText" name="username" type="text" placeholder="User Name" required>
+                    <input class="registerPassword greyText" name="password" type="password" placeholder="Password" required>
+                    <input class="registerEmail greyText" name="email" type="email" placeholder="Email" required>
+                    <button class="button" id="register">Register</button>
+                </div>
+            </form>
+            <div class="loginRegister">
+                <p>Already have an account? <a id="sign-in-link" href="#">Click here.</a></p>
+            </div>
+        </div>
+    </section>
+    <main role="main" id="full-form" class="hidden">
+        <section role="region" class="form-wrapper">
+            <fieldset>
+                <section role="region" class="select-previous-entries">
+                    <legend class="legend">Patient Entries</legend>
+                    <select class="previous-entries-dropdown">
+                    </select>
+                    <button class="sideBySide button" id="form-delete-button">Delete Entry</button>
+                </section>
+            </fieldset>
+        </section>
+        <form class="general-information-form">
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> General Patient Information</legend>
+                    <legend class="legend-hide"><button>-</button> General Patient Information</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="firstName">First Name</label>
+                            <input class="firstName" name="firstName" type="text" value="" placeholder="Jane" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patient's first name. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="lastName">Last Name</label>
+                            <input class="lastName" name="lastName" type="text" value="" placeholder="Doe" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patient's last name. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="diagnosis">Diagnosis</label>
+                            <input class="diagnosis" name="diagnosis" type="text" value="" placeholder="Meningitis" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patient's diagnosis. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="gestationalAge">GA</label>
+                            <input class="gestationalAge" name="gestationalAge" type="number" value="" placeholder="29" class="sideBySide" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Gestational Age with at least 1 numerical character. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="correctedGestationalAge">CGA</label>
+                            <input class="correctedGestationalAgeWeek sideBySide" name="correctedGestationalAgeWeek" type="number" value="" placeholder="29" required>weeks
+                            <input class="correctedGestationalAgeDay sideBySide" name="correctedGestationalAgeDay" type="number" value="" placeholder="7" required>days
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Corrected Gestational Age with at least 1 numerical character. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dayOfLife">DOL</label>
+                            <input class="dayOfLife sideBySide" name="dayOfLife" type="number" value="" placeholder="18" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Day of Life with at least 1 numerical character. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dateOfBirth">DOB</label>
+                            <input class="dayOfBirth sideBySide" name="dayOfBirth" type="date" value="" placeholder="1993-03-03" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Day the patient was born. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="timeOfBirth">TOB</label>
+                            <input class="timeOfBirth sideBySide" name="timeOfBirth" type="time" value="" placeholder="15:02" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The time the patient was born. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="birthWeight">Birth Wt (grams)</label>
+                            <input class="birthWeight sideBySide" name="birthWeight" type="number" placeholder="1050" value="" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The weight of the patient at the time of birth. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="currentWeight">Current Wt (grams)</label>
+                            <input class="currentWeight sideBySide" name="currentWeight" type="number" placeholder="1600" value="" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The current weight of the patient. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="kaiserScore">Kaiser Score</label>
+                            <input class="kaiserScore" name="kaiserScore" type="number" placeholder="2.3" value="" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The kaiser score of the patient. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="bloodType">Blood Type</label>
+                            <select class="bloodType sideBySide" name="bloodType" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The blood type of the patient. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="coombs">COOMBS</label>
+                            <select class="coombs sideBySide" name="coombs" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Coombs test results. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="acuity">Acuity</label>
+                            <select class="acuity sideBySide" name="acuity" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="1:1">1:1</option>
+                                <option value="1:2">1:2</option>
+                                <option value="1:3">1:3</option>
+                                <option value="1:4">1:4</option>
+                                <option value="2:1">2:1</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Acuity of the patient. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="bedNumber">Bed Number</label>
+                            <input class="bedNumber sideBySide" name="bedNumber" type="number" placeholder="12" value="" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The patients bed number. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dateOfAdmission">Date of Admission</label>
+                            <input class="dateOfAdmission sideBySide" name="dateOfAdmission" type="date" value="" placeholder="1993-04-04" required>
+                            <label for="timeOfAdmission">Time of Admission</label>
+                            <input class="timeOfAdmission sideBySide" name="timeOfAdmission" type="time" value="" placeholder="16:03" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date and time the patient was admitted. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dateOfDischarge">Date of Discharge</label>
+                            <input class="dateOfDischarge sideBySide" name="dateOfDischarge" type="date" value="" placeholder="1993-05-05" required>
+                            <label for="timeOfDischarge">Time of Discharge</label>
+                            <input class="timeOfDischarge sideBySide" name="timeOfDischarge" type="time" value="" placeholder="17:03" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date and time the patient was discharged. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Maternal/Delivery Information</legend>
+                    <legend class="legend-hide"><button>-</button> Maternal/Delivery Information</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="gravida">Gravida</label>
+                            <input class="gravida sideBySide" name="gravida" type="number" value="" placeholder="4" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>How many pregnancies mother has had. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="para">Para</label>
+                            <input class="para sideBySide" name="para" type="number" value="" placeholder="3" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>How many deliveries mother has had. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="age">Age</label>
+                            <input class="age sideBySide" name="age" type="number" value="" placeholder="30" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Age of mother. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="vagCs">VAG/CS</label>
+                            <select class=" vagCs sideBySide" name="vagCs" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="vag">VAG</option>
+                                <option value="cs">CS</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Vaginal or C-Section birth. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="apgar">APGAR</label>
+                            <select class="apgar1 sideBySide" name="apgar1" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <select class="apgar2 sideBySide" name="apgar2" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patients APGAR score. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="rom">ROM</label>
+
+                            <input class="rom sideBySide" name="rom" type="number" value="" placeholder="50" required>hours
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Rupture of membranes. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="hx">HX</label>
+                            <input class="hx sideBySide" name="hx" type="text" value="" placeholder="Drug Abuse" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Maternal history for patient. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="maternalBloodType">Maternal Blood Type</label>
+                            <select class="maternalBloodType sideBySide" name="maternalBloodType" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The maternal blood type. Required. Consistent.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Assessment</legend>
+                    <legend class="legend-hide"><button>-</button> Assessment</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="hus">HUS</label>
+                            <input class="husCheck sideBySide" name="husCheck" type="checkbox" value="husCheck">
+                            <textarea class="husText depth-notes" name="husText" cols="40" rows="5" placeholder="lorem ipsum HUS text"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Head Ultra Sound. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="respiratory">Respiratory</label>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="ra" name="respiratory" value="RA"> RA
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="vent" name="respiratory" value="VENT"> VENT
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="hfnc" name="respiratory" value="HFNC"> HFNC
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="vt" name="respiratory" value="VT"> VT
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="cpap" name="respiratory" value="CPAP"> CPAP
+                            </div>
+                            <textarea class="respiratoryText depth-notes" name="respiratoryText" cols="40" rows="5" placeholder="lorem ipsum Respiratory text"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Respiratory support settings. One Required. Interchangeable.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="fio2">FIO2</label>
+                            <input class="fio2 sideBySide" name="fio2" type="number" min="21" max="100" value="" placeholder="21" required>%
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>FIO2 Percentage. Required. If RA is selected, FIO2 is 21%.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="abdpb">ABs/Desats/PB</label>
+                            <textarea class="abdpb depth-notes" name="abdpb" cols="40" rows="5" placeholder="lorem ipsum ABS"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Apnea Bradycardia/Desaturations/Periodic Breathing. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cardiac">Cardiac</label><br>
+                            <div class="radioCheck">
+                                <input class="murmur sideBySide" name="murmur" type="checkbox" value="murmur"> Murmur
+                            </div>
+                            <div class="radioCheck">
+                                <input class="echo sideBySide" name="echo" type="checkbox" value="echo"> ECHO
+                            </div>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Checkboxes for murmur and echo. Not Required.</span>
+                                </div>
+                            </div>
+                            <label for="cardiacResults">Cardiac Results</label>
+                            <textarea class="cardiacResults depth-notes" name="cardiacResults" cols="40" rows="5" placeholder="lorem ipsum Cardiac Results"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Results text input. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="meds">Meds</label>
+                            <textarea class="meds depth-notes" name="meds" cols="40" rows="5" placeholder="lorem ipsum med notes"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patients medication. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Labs/Tests</legend>
+                    <legend class="legend-hide"><button>-</button> Labs/Tests</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="labsTests">Labs/Tests</label>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="cbc sideBySide" name="cbc" value="cbc"> CBC
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="tb sideBySide" name="tb" value="tb"> TB
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="bmp sideBySide" name="bmp" value="bmp"> BMP
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="crp sideBySide" name="crp" value="crp"> CRP
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="tg sideBySide" name="tg" value="tg"> TG
+                            </div>
+                            <textarea class="labsTestsText depth-notes" name="labsTestsText" cols="40" rows="5" placeholder="lorem ipsum Labs/Tests"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Checkbox form for labs/tests. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="qtuLabs">QTu Labs</label>
+                            <textarea class="qtuLabs depth-notes" name="qtuLabs" cols="40" rows="5" placeholder="lorem ipsum QTu Labs"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Information regarding the QTu Labs. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="trough">Trough</label>
+                            <input class="troughCheck sideBySide" name="troughCheck" value="troughCheck" type="checkbox">
+                            <input class="troughText sideBySide" name="troughText" type="text" value="" placeholder="Trough active">@
+                            <div class="radioCheck">
+                                <input class="dateOfTrough sideBySide" name="dateOfTrough" type="date" value="">
+                                <input class="timeOfTrough sideBySide" name="timeOfTrough" type="time" value="">
+                            </div>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date and time of trough.If box is checked, required. Consistent</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="radiology">Radiology</label>
+                            <div class="radioCheck">
+                                <input class="cxrCheck sideBySide" name="cxrCheck" type="checkbox" value="cxrCheck"> CXR
+                                <input class="cxrDate sideBySide" name="cxrDate" type="date" value="">
+                            </div>
+                            <div class="radioCheck">
+                                <input class="kubCheck sideBySide" name="kubCheck" type="checkbox" value="kubCheck"> KUB
+                                <input class="kubDate sideBySide" name="kubDate" type="date" value="">
+                            </div>
+                            <input class="radiologyText sideBySide" name="radiologyText" type="text" value="" placeholder="X-rays pending">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Time of Radilogy. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Other Tests</legend>
+                    <legend class="legend-hide"><button>-</button> Other Tests</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="hepB">Hepatitis B Vaccine</label>
+                            <input class="hepBDate sideBySide" name="hepBDate" type="date" value="">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has Hepatitis B Vaccine. Not Required. </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="newbornScreen">Newborn Screen</label>
+                            <input class="newbornScreenDate sideBySide" name="newbornScreenDate" type="date" value="">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has Newborn Screen, then select date. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cchdEcho">CCHD/ECHO</label>
+                            <textarea class="cchdEchoText depth-notes" name="cchdEchoText" cols="40" rows="5" placeholder="lorem ipsum CCHD"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span> If pateint has either CCHD/ECHO, then add text. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="eyeExam">Eye Exam Date/Results</label>
+                            <input class="eyeExamDate sideBySide" name="eyeExamDate" type="date" value=""> Results
+                            <textarea class="eyeExamText depth-notes" name="eyeExamText" cols="40" rows="5" placeholder="lorem ipsum Eye Exam"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span> If the patient has had an eye exam, then add date and text. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="fu">F/U</label>
+                            <input class="fuDate" name="fuDate" type="date" value="">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has had a follow up, then add date. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="hearing">Hearing</label>
+                            <input class="hearingCheck sideBySide" name="hearingCheck" type="checkbox" value="hearingCheck">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>If the patient has had hearing test. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="carSeat">Car Seat</label>
+                            <input class="carSeatCheck sideBySide" name="carSeatCheck" type="checkbox" value="carSeatCheck">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient needs a car seat. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cpr">CPR</label>
+                            <input class="cprCheck sideBySide" name="cprCheck" type="checkbox" value="cprCheck">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patients parents have watched CPR video. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="circ">Circ</label>
+                            <input class="circCheck sideBySide" name="circCheck" type="checkbox" value="circCheck">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient is circumsized. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Fluids/Drugs</legend>
+                    <legend class="legend-hide"><button>-</button> Fluids/Drugs</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="ivFluids">IV Fluids</label>
+                            <div class="radioCheck">
+                                <input class="pivCheck sideBySide" name="pivCheck" type="checkbox" value="pivCheck"> PIV
+                            </div>
+                            <div class="radioCheck">
+                                <input class="piccCheck sideBySide" name="piccCheck" type="checkbox" value="piccCheck"> PICC
+                            </div>
+                            <div class="radioCheck">
+                                <input class="uacCheck sideBySide" name="uacCheck" type="checkbox" value="uacCheck"> UAC
+                            </div>
+                            <div class="radioCheck">
+                                <input class="uvcCheck sideBySide" name="uvcCheck" type="checkbox" value="uvcCheck"> UVC
+                            </div>
+                            <div class="radioCheck">
+                                <input class="salineLockCheck sideBySide" name="salineLockCheck" type="checkbox" value="salineLockCheck"> Saline Lock
+                            </div>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check what IV fluids patine uses. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="drug">D(rug)</label>
+                            <input class="drugInput sideBySide" name="drugInput" type="text" value="" placeholder="Morphine">@
+                            <input class="ccDrug sideBySide" name="cc" type="number" value="" placeholder="50">
+                            <input class="hrDrug sideBySide" name="hrDrug" type="number" value="" placeholder="2">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Amount of drugs used per hour. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="tpnDrug">TPN D(rug)</label>
+                            <input class="tDrugInput sideBySide" name="tDrugInput" type="text" value="" placeholder="Dilaudid">@
+                            <input class="ccTDrug sideBySide" name="ccTDrug" type="number" value="" placeholder="40">
+                            <input class="hrTDrug sideBySide" name="hrTDrug" type="number" value="" placeholder="1">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Amount of drugs used per hour. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="il">IL</label>@
+                            <input class="ccIl sideBySide" name="ccIl" type="number" value="" placeholder="30">
+                            <input class="hrIl sideBySide" name="hrIl" type="number" value="" placeholder="3">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Amount of drugs used per hour. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="other">Other</label>
+                            <textarea class="drugNotes depth-notes" name="drugNotes" cols="40" rows="5" placeholder="loreum ipsum Other drug notes"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Notes regarding intake. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Diet/Feeding Schedule</legend>
+                    <legend class="legend-hide"><button>-</button> Diet/Feeding Schedule</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="feedingMethod">Method of Feeding</label>
+                            <select class="feedingMethod sideBySide" name="feedingMethod" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="ng">NG</option>
+                                <option value="nipple">NIPPLE</option>
+                                <option value="npo">NPO</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Method of feeding. Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="adLib">Ad Lib</label>
+                            <input type="checkbox" class="adLib sideBySide" name="adLib" value="adLib">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>If patient can be fed as much as they want. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cueBased">Cue-based</label>
+                            <input type="checkbox" class="cueBased sideBySide" name="cueBased" value="cueBased">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>If the patient gives cues when hungry. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="foodItanke">Food Intake</label>
+                            <input class="fiCC sideBySide" name="fiCC" type="number" value="" placeholder="160"> cc/kg/day
+                            <input class="hrCC sideBySide" name="hrCC" type="number" value="" placeholder="27">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Cubic Centimeters Per Kilogram Per Day of food intake. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="attemptedFeeding">Feeding Attempts</label>
+                            <input class="feedingAttempts sideBySide" name="feedingAttempts" type="number" value="" placeholder="7">Attempted
+                            <input class="completedAttempts sideBySide" name="completedAttempts" type="number" value="" placeholder="3">Completed
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Feeding attempts with at least 1 numerical character. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> In Depth Patient Notes</legend>
+                    <legend class="legend-hide"><button>-</button> In Depth Patient Notes</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="planOfCare">Plan of Care</label>
+                            <textarea name="planOfCare" cols="40" rows="5" class="depth-notes planOfCare" placeholder="lorem ipsum plan of care"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for Plan of Care. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="socialConsiderations">Social Considerations</label>
+                            <textarea name="socialConsiderations" cols="40" rows="5" class="depth-notes socialConsiderations" placeholder="lorem ipsum social consideration"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for social considerations. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="historyChanges">History/Changes</label>
+                            <textarea name="historyChanges" cols="40" rows="5" class="depth-notes historyChanges" placeholder="lorem ipsum history and changes"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for patient history and changes. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper last-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Other</legend>
+                    <legend class="legend-hide"><button>-</button> Other</legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="referalls">Referalls</label>
+                            <input class="referalls sideBySide" name="referalls" type="text" value="" placeholder="Yashar">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for referalls. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="synagis">Synagis</label>
+                            <input class="synagis sideBySide" name="synagis" type="checkbox" value="synagis">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if child is using Synagis. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="vaccine">2mo Vaccine</label>
+                            <input class="vaccine sideBySide" name="vaccine" type="checkbox" value="vaccine" placeholder="vaccine">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if child has had 2 month vaccine. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="pediatrician">Pediatrician</label>
+                            <input class="pediatrician sideBySide" name="pediatrician" type="text" value="" placeholder="Sanchez">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for patients Pediatrician. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="lastBath">Last Bath</label>
+                            <input class="lastBath sideBySide" name="lastBath" type="date" value="">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date for the patients last bath. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="coolingPatient">Cooling Patient</label>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="consent sideBySide" name="consent" value="consent"> Consent
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="husCP sideBySide" name="husCP" value="husCP"> HUS
+                            </div>
+                            <input type="date" class="cpDate sideBySide" name="cpDate" value="">Date
+                            <input type="time" class="cpTime sideBySide" name="cpTime" value="">Time
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Cooling patient information. Not required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="coolingPatient">Phototherapy</label>
+                            <input class="phototherapyStartDate sideBySide" type="date" name="phototherapyStartDate" value="">
+                            <input class="phototherapyEndDate sideBySide" type="date" name="phototherapyEndDate" value="">
+                            <select name="phototherapySelect" class="phototherapySelect sideBySide">
+                                <option value="" disabled selected>Select...</option>
+                                <option value="single">Single</option>
+                                <option value="double">Double</option>
+                                <option value="triple">Triple</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Phototherapy for patient. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper fixed-cta">
+                <fieldset>
+                    <button class="sideBySide button" id="form-submit-button">Save</button>
+                </fieldset>
+            </section>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
