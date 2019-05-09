@@ -1,7 +1,7 @@
 # NICU Patient Tracking Application
-Live Preview with node @ https://patient-tracking-capstone.herokuapp.com/
+Live Preview with react @ https://dnd-character-sheet-react.herokuapp.com/
 
-Live Preview without Node https://pillgrumm.github.io/patient-tracking-node-capstone/public/index.html
+Live Preview with Node https://dnd-character-sheet-node.herokuapp.com/
 
 This application is meant to be used for the medical staff of a neonatal intensive care unit. The staff will be able to keep record
 of patient information simply by logging into their units (or personal) account to get a list of existing patient records, while
