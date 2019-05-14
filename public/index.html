@@ -60,212 +60,119 @@
         <section role="region" class="form-wrapper">
             <fieldset>
                 <section role="region" class="select-previous-entries">
-                    <legend class="legend">Characters</legend>
+                    <legend class="legend">Create a chracter/Character Name</legend>
+                    <!--
                     <select class="previous-entries-dropdown">
                     </select>
+-->
                     <button class="sideBySide button" id="form-delete-button">Delete Entry</button>
                 </section>
             </fieldset>
         </section>
-        <form class="general-information-form">
+        <form class="character-information-form">
             <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> General </legend>
                     <legend class="legend-hide"><button>-</button> General </legend>
                     <section role="region" class="section-content">
                         <div class="input-wrapper">
-                            <label for="firstName">First Name</label>
-                            <input class="firstName" name="firstName" type="text" value="" placeholder="Jane" required>
+                            <label for="characterName">Character Name</label>
+                            <input class="characterName" name="characterName" type="text" placeholder="Character Name" value="Grierat" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Patient's first name. Required.</span>
+                                    <span>Character Name. Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="lastName">Last Name</label>
-                            <input class="lastName" name="lastName" type="text" value="" placeholder="Doe" required>
+                            <label for="characterClass">Class</label>
+                            <input class="characterClass" name="characterClass" type="text" value="Rogue" placeholder="Class" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Patient's last name. Required.</span>
+                                    <span>Character's class. Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="diagnosis">Diagnosis</label>
-                            <input class="diagnosis" name="diagnosis" type="text" value="" placeholder="Meningitis" required>
+                            <label for="characterLevel">Level</label>
+                            <input class="characterLevel" name="characterLevel" type="number" value="3" placeholder="0" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Patient's diagnosis. Required.</span>
+                                    <span>Character's level. Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="gestationalAge">GA</label>
-                            <input class="gestationalAge" name="gestationalAge" type="number" value="" placeholder="29" class="sideBySide" required>
+                            <label for="characterRace">Race</label>
+                            <input class="characterRace" name="characterRace" type="text" value="Wood Elf" placeholder="Race" class="sideBySide" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Gestational Age with at least 1 numerical character. Required.</span>
+                                    <span>Character Race. Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="correctedGestationalAge">CGA</label>
-                            <input class="correctedGestationalAgeWeek sideBySide" name="correctedGestationalAgeWeek" type="number" value="" placeholder="29" required>weeks
-                            <input class="correctedGestationalAgeDay sideBySide" name="correctedGestationalAgeDay" type="number" value="" placeholder="7" required>days
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>Corrected Gestational Age with at least 1 numerical character. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="dayOfLife">DOL</label>
-                            <input class="dayOfLife sideBySide" name="dayOfLife" type="number" value="" placeholder="18" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>Day of Life with at least 1 numerical character. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="dateOfBirth">DOB</label>
-                            <input class="dayOfBirth sideBySide" name="dayOfBirth" type="date" value="" placeholder="1993-03-03" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>Day the patient was born. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="timeOfBirth">TOB</label>
-                            <input class="timeOfBirth sideBySide" name="timeOfBirth" type="time" value="" placeholder="15:02" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>The time the patient was born. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="birthWeight">Birth Wt (grams)</label>
-                            <input class="birthWeight sideBySide" name="birthWeight" type="number" placeholder="1050" value="" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>The weight of the patient at the time of birth. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="currentWeight">Current Wt (grams)</label>
-                            <input class="currentWeight sideBySide" name="currentWeight" type="number" placeholder="1600" value="" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>The current weight of the patient. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="kaiserScore">Kaiser Score</label>
-                            <input class="kaiserScore" name="kaiserScore" type="number" placeholder="2.3" value="" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>The kaiser score of the patient. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="bloodType">Blood Type</label>
-                            <select class="bloodType sideBySide" name="bloodType" required>
-                                <option value="" disabled selected>Select...</option>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
-                                <option value="B-">B-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
+                            <label for="alignment">Alignment</label>
+                            <select class="alignment sideBySide" name="alignment" required>
+                                <option value="" disabled>Select...</option>
+                                <option value="Lawful Good">Lawful Good</option>
+                                <option value="Lawful Neutral">Lawful Neutral</option>
+                                <option value="Lawful Evil">Lawful Evil</option>
+                                <option value="Neutral Good">Neutral Good</option>
+                                <option value="True Neutral" selected>True Neutral</option>
+                                <option value="Neutral Evil">Neutral Evil</option>
+                                <option value="Chaotic Good">Chaotic Good</option>
+                                <option value="Chaotic Neutral">Chaotic Neutral</option>
+                                <option value="Chaotic Evil">Chaotic Evil</option>
                             </select>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>The blood type of the patient. Required.</span>
+                                    <span>Characters Alignment. Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="coombs">COOMBS</label>
-                            <select class="coombs sideBySide" name="coombs" required>
-                                <option value="" disabled selected>Select...</option>
-                                <option value="+">+</option>
-                                <option value="-">-</option>
-                            </select>
+                            <label for="background">Background</label>
+                            <input class="background sideBySide" name="background" type="text" value="Urchin" placeholder="Background" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Coombs test results. Required.</span>
+                                    <span>Characters background. Not Required</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="acuity">Acuity</label>
-                            <select class="acuity sideBySide" name="acuity" required>
-                                <option value="" disabled selected>Select...</option>
-                                <option value="1:1">1:1</option>
-                                <option value="1:2">1:2</option>
-                                <option value="1:3">1:3</option>
-                                <option value="1:4">1:4</option>
-                                <option value="2:1">2:1</option>
-                            </select>
+                            <label for="experience">EXP</label>
+                            <input class="experience sideBySide" name="experience" type="number" placeholder="0" value="1500" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Acuity of the patient. Required.</span>
+                                    <span>Characters experience points. Not Required</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="bedNumber">Bed Number</label>
-                            <input class="bedNumber sideBySide" name="bedNumber" type="number" placeholder="12" value="" required>
+                            <label for="hitPoints">HP</label>
+                            <input class="hitPoints sideBySide" name="hitPoints" type="number" placeholder="0" value="19" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>The patients bed number. Required.</span>
+                                    <span>Hit Points. Not Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="dateOfAdmission">Date of Admission</label>
-                            <input class="dateOfAdmission sideBySide" name="dateOfAdmission" type="date" value="" placeholder="1993-04-04" required>
-                            <label for="timeOfAdmission">Time of Admission</label>
-                            <input class="timeOfAdmission sideBySide" name="timeOfAdmission" type="time" value="" placeholder="16:03" required>
+                            <label for="gp">GP</label>
+                            <input class="gp sideBySide" name="gp" type="number" placeholder="0" value="27" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Date and time the patient was admitted. Required.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="dateOfDischarge">Date of Discharge</label>
-                            <input class="dateOfDischarge sideBySide" name="dateOfDischarge" type="date" value="" placeholder="1993-05-05" required>
-                            <label for="timeOfDischarge">Time of Discharge</label>
-                            <input class="timeOfDischarge sideBySide" name="timeOfDischarge" type="time" value="" placeholder="17:03" required>
-                            <div class="icons-wrapper">
-                                <div class="icon-content icon-content-info">
-                                    <i class="fas fa-info"></i>
-                                    <span>Date and time the patient was discharged. Not Required.</span>
+                                    <span>Gold Pieces. Not Required.</span>
                                 </div>
                             </div>
                         </div>
@@ -273,12 +180,14 @@
                 </fieldset>
             </section>
 
+            <!--
             <section role="region" class="form-wrapper fixed-cta">
                 <fieldset>
                     <button class="sideBySide button" id="form-submit-button">Save</button>
                     <button class="sideBySide button" id="form-delete-button">Delete Entry</button>
                 </fieldset>
             </section>
+-->
         </form>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

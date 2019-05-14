@@ -9,42 +9,42 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    firstName: {
+    characterName: {
         type: String,
         required: false,
         default: ""
     },
-    lastName: {
+    characterClass: {
         type: String,
         required: false,
         default: ""
     },
-    diagnosis: {
+    characterLevel: {
         type: String,
         required: false,
         default: ""
     },
-    gestationalAge: {
+    characterRace: {
         type: String,
         required: false,
         default: ""
     },
-    correctedGestationalAgeDay: {
+    alignment: {
         type: Number,
         required: false,
         default: ""
     },
-    correctedGestationalAgeWeek: {
+    background: {
         type: Number,
         required: false,
         default: ""
     },
-    dayOfLife: {
+    experience: {
         type: Number,
         required: false,
         default: ""
     },
-    dayOfBirth: {
+    hitPoints: {
         type: String,
         required: false,
         default: ""
@@ -84,7 +84,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    bedNumber: {
+    gp: {
         type: Number,
         required: false,
         default: ""

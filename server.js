@@ -179,22 +179,22 @@ app.post('/form/create', (req, res) => {
 
     Form.create({
         loggedInUser: req.body.loggedInUser,
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        diagnosis: req.body.diagnosis,
-        gestationalAge: req.body.gestationalAge,
-        correctedGestationalAgeDay: req.body.correctedGestationalAgeDay,
-        correctedGestationalAgeWeek: req.body.correctedGestationalAgeWeek,
-        dayOfLife: req.body.dayOfLife,
+        characterName: req.body.characterName,
+        characterClass: req.body.characterClass,
+        characterLevel: req.body.characterLevel,
+        characterRace: req.body.characterRace,
+        alignment: req.body.alignment,
+        background: req.body.background,
+        experience: req.body.experience,
+        hitPoints: req.body.hitPoints,
         dayOfBirth: req.body.dayOfBirth,
         timeOfBirth: req.body.timeOfBirth,
         birthWeight: req.body.birthWeight,
-        currentWeight: req.body.currentWeight,
         kaiserScore: req.body.kaiserScore,
         bloodType: req.body.bloodType,
         coombs: req.body.coombs,
         acuity: req.body.acuity,
-        bedNumber: req.body.bedNumber,
+        gp: req.body.gp,
         dateOfAdmission: req.body.dateOfAdmission,
         timeOfAdmission: req.body.timeOfAdmission,
         dateOfDischarge: req.body.dateOfDischarge,
@@ -296,7 +296,7 @@ app.post('/form/create', (req, res) => {
 
 app.put('/form/update/:id', function (req, res) {
     let toUpdate = {};
-    let updateableFields = ['loggedInUser', 'firstName', 'lastName', 'diagnosis', 'gestationalAge', 'correctedGestationalAgeDay', 'correctedGestationalAgeWeek', 'dayOfLife', 'dayOfBirth', 'timeOfBirth', 'birthWeight', 'currentWeight', 'kaiserScore', 'bloodType', 'coombs', 'acuity', 'bedNumber', 'dateOfAdmission', 'timeOfAdmission', 'dateOfDischarge', 'timeOfDischarge', 'gravida', 'para', 'age', 'vagCs', 'apgar1', 'apgar2', 'rom', 'hx', 'maternalBloodType', 'husCheck', 'husText', 'respiratoryOptions', 'respiratoryText', 'fio2', 'abdpb', 'murmur', 'echo', 'cardiacResults', 'meds', 'cbc', 'tb', 'bmp', 'crp', 'tg', 'labsTestsText', 'qtuLabs', 'troughCheck', 'troughText', 'dateOfTrough', 'timeOfTrough', 'cxrCheck', 'cxrDate', 'kubCheck', 'kubDate', 'radiologyText', 'hepBDate', 'newbornScreenDate', 'cchdEchoText', 'eyeExamDate', 'eyeExamText', 'fuDate', 'hearingCheck', 'carSeatCheck', 'cprCheck', 'circCheck', 'pivCheck', 'piccCheck', 'uacCheck', 'uvcCheck', 'salineLockCheck', 'drugInput', 'ccDrug', 'hrDrug', 'tDrugInput', 'ccTDrug', 'hrTDrug', 'ccIl', 'hrIl', 'drugNotes', 'feedingMethod', 'adLib', 'cueBased', 'fiCC', 'hrCC', 'feedingAttempts', 'completedAttempts', 'planOfCare', 'socialConsiderations', 'historyChanges', 'referalls', 'synagis', 'vaccine', 'pediatrician', 'lastBath', 'consent', 'husCP', 'cpDate', 'cpTime', 'phototherapyStartDate', 'phototherapyEndDate', 'phototherapySelect'];
+    let updateableFields = ['loggedInUser', 'characterName', 'characterClass', 'characterLevel', 'characterRace', 'alignment', 'background', 'experience', 'dayOfBirth', 'timeOfBirth', 'birthWeight', 'hitPoints', 'kaiserScore', 'bloodType', 'coombs', 'acuity', 'gp', 'dateOfAdmission', 'timeOfAdmission', 'dateOfDischarge', 'timeOfDischarge', 'gravida', 'para', 'age', 'vagCs', 'apgar1', 'apgar2', 'rom', 'hx', 'maternalBloodType', 'husCheck', 'husText', 'respiratoryOptions', 'respiratoryText', 'fio2', 'abdpb', 'murmur', 'echo', 'cardiacResults', 'meds', 'cbc', 'tb', 'bmp', 'crp', 'tg', 'labsTestsText', 'qtuLabs', 'troughCheck', 'troughText', 'dateOfTrough', 'timeOfTrough', 'cxrCheck', 'cxrDate', 'kubCheck', 'kubDate', 'radiologyText', 'hepBDate', 'newbornScreenDate', 'cchdEchoText', 'eyeExamDate', 'eyeExamText', 'fuDate', 'hearingCheck', 'carSeatCheck', 'cprCheck', 'circCheck', 'pivCheck', 'piccCheck', 'uacCheck', 'uvcCheck', 'salineLockCheck', 'drugInput', 'ccDrug', 'hrDrug', 'tDrugInput', 'ccTDrug', 'hrTDrug', 'ccIl', 'hrIl', 'drugNotes', 'feedingMethod', 'adLib', 'cueBased', 'fiCC', 'hrCC', 'feedingAttempts', 'completedAttempts', 'planOfCare', 'socialConsiderations', 'historyChanges', 'referalls', 'synagis', 'vaccine', 'pediatrician', 'lastBath', 'consent', 'husCP', 'cpDate', 'cpTime', 'phototherapyStartDate', 'phototherapyEndDate', 'phototherapySelect'];
     updateableFields.forEach(function (field) {
         if (field in req.body) {
             toUpdate[field] = req.body[field];
@@ -320,22 +320,22 @@ app.post('/form/create', (req, res) => {
 
     Form.create({
         loggedInUser: req.body.loggedInUser,
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        diagnosis: req.body.diagnosis,
-        gestationalAge: req.body.gestationalAge,
-        correctedGestationalAgeDay: req.body.correctedGestationalAgeDay,
-        correctedGestationalAgeWeek: req.body.correctedGestationalAgeWeek,
-        dayOfLife: req.body.dayOfLife,
+        characterName: req.body.characterName,
+        characterClass: req.body.characterClass,
+        characterLevel: req.body.characterLevel,
+        characterRace: req.body.characterRace,
+        alignment: req.body.alignment,
+        background: req.body.background,
+        experience: req.body.experience,
+        hitPoints: req.body.hitPoints,
         dayOfBirth: req.body.dayOfBirth,
         timeOfBirth: req.body.timeOfBirth,
         birthWeight: req.body.birthWeight,
-        currentWeight: req.body.currentWeight,
         kaiserScore: req.body.kaiserScore,
         bloodType: req.body.bloodType,
         coombs: req.body.coombs,
         acuity: req.body.acuity,
-        bedNumber: req.body.bedNumber,
+        gp: req.body.gp,
         dateOfAdmission: req.body.dateOfAdmission,
         timeOfAdmission: req.body.timeOfAdmission,
         dateOfDischarge: req.body.dateOfDischarge,

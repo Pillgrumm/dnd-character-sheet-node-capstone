@@ -17,7 +17,7 @@ function getPreviousEntries(userId) {
                 let timeOutputOnly = partsOfDataInput[1];
                 let splitDataOutputOnly = dataOutputOnly.split('-');
                 let splitTimeOutputOnly = timeOutputOnly.split(':');
-                htmlOutput += '<option value="' + result.entries[i]._id + '">' + splitDataOutputOnly[1] + '/' + splitDataOutputOnly[2] + '/' + splitDataOutputOnly[0] + ' ' + splitTimeOutputOnly[0] + ':' + splitTimeOutputOnly[1] + '(UTC)  ' + result.entries[i].firstName + ' ' + result.entries[i].lastName + '</option>';
+                htmlOutput += '<option value="' + result.entries[i]._id + '">' + splitDataOutputOnly[1] + '/' + splitDataOutputOnly[2] + '/' + splitDataOutputOnly[0] + ' ' + splitTimeOutputOnly[0] + ':' + splitTimeOutputOnly[1] + '(UTC)  ' + result.entries[i].characterName + ' ' + result.entries[i].characterClass + '</option>';
             }
             $(".previous-entries-dropdown").html(htmlOutput);
         })
@@ -45,22 +45,22 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
         //if call is succefull
         .done(function (result) {
             $('.logged-in-user').val(result.entries[0].loggedInUser);
-            $('.firstName').val(result.entries[0].firstName);
-            $('.lastName').val(result.entries[0].lastName);
-            $('.diagnosis').val(result.entries[0].diagnosis);
-            $('.gestationalAge').val(result.entries[0].gestationalAge);
-            $('.correctedGestationalAgeDay').val(result.entries[0].correctedGestationalAgeDay);
-            $('.correctedGestationalAgeWeek').val(result.entries[0].correctedGestationalAgeWeek);
-            $('.dayOfLife').val(result.entries[0].dayOfLife);
+            $('.characterName').val(result.entries[0].characterName);
+            $('.characterClass').val(result.entries[0].characterClass);
+            $('.characterLevel').val(result.entries[0].characterLevel);
+            $('.characterRace').val(result.entries[0].characterRace);
+            $('.bloodType').val(result.entries[0].bloodType);
+            $('.alignment').val(result.entries[0].alignment);
+            $('.background').val(result.entries[0].background);
+            $('.experience').val(result.entries[0].experience);
             $('.dayOfBirth').val(result.entries[0].dayOfBirth);
             $('.timeOfBirth').val(result.entries[0].timeOfBirth);
             $('.birthWeight').val(result.entries[0].birthWeight);
-            $('.currentWeight').val(result.entries[0].currentWeight);
+            $('.hitPoints').val(result.entries[0].hitPoints);
             $('.kaiserScore').val(result.entries[0].kaiserScore);
-            $('.bloodType').val(result.entries[0].bloodType);
             $('.coombs').val(result.entries[0].coombs);
             $('.acuity').val(result.entries[0].acuity);
-            $('.bedNumber').val(result.entries[0].bedNumber);
+            $('.gp').val(result.entries[0].gp);
             $('.dateOfAdmission').val(result.entries[0].dateOfAdmission);
             $('.timeOfAdmission').val(result.entries[0].timeOfAdmission);
             $('.dateOfDischarge').val(result.entries[0].dateOfDischarge);
@@ -214,22 +214,22 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
     } else {
         $("#form-delete-button").hide();
         $('.selected-entry-id').val("");
-        $('.firstName').val("");
-        $('.lastName').val("");
-        $('.diagnosis').val("");
-        $('.gestationalAge').val("");
-        $('.correctedGestationalAgeDay').val("");
-        $('.correctedGestationalAgeWeek').val("");
-        $('.dayOfLife').val("");
+        $('.characterName').val("");
+        $('.characterClass').val("");
+        $('.characterLevel').val("");
+        $('.characterRace').val("");
+        $('.alignment').val("");
+        $('.background').val("");
+        $('.experience').val("");
         $('.dayOfBirth').val("");
         $('.timeOfBirth').val("");
         $('.birthWeight').val("");
-        $('.currentWeight').val("");
+        $('.hitPoints').val("");
         $('.kaiserScore').val("");
         $('.bloodType').val("");
         $('.coombs').val("");
         $('.acuity').val("");
-        $('.bedNumber').val("");
+        $('.gp').val("");
         $('.dateOfAdmission').val("");
         $('.timeOfAdmission').val("");
         $('.dateOfDischarge').val("");
@@ -482,22 +482,22 @@ $('#form-delete-button').on('click', function (event) {
             $('.selected-entry-id').val("");
             $("#form-delete-button").hide();
             $('.selected-entry-id').val("");
-            $('.firstName').val("");
-            $('.lastName').val("");
-            $('.diagnosis').val("");
-            $('.gestationalAge').val("");
-            $('.correctedGestationalAgeDay').val("");
-            $('.correctedGestationalAgeWeek').val("");
-            $('.dayOfLife').val("");
+            $('.characterName').val("");
+            $('.characterClass').val("");
+            $('.characterLevel').val("");
+            $('.characterRace').val("");
+            $('.alignment').val("");
+            $('.background').val("");
+            $('.experience').val("");
             $('.dayOfBirth').val("");
             $('.timeOfBirth').val("");
             $('.birthWeight').val("");
-            $('.currentWeight').val("");
+            $('.hitPoints').val("");
             $('.kaiserScore').val("");
             $('.bloodType').val("");
             $('.coombs').val("");
             $('.acuity').val("");
-            $('.bedNumber').val("");
+            $('.gp').val("");
             $('.dateOfAdmission').val("");
             $('.timeOfAdmission').val("");
             $('.dateOfDischarge').val("");
@@ -651,22 +651,22 @@ $('#form-submit-button').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
     const selectedEntryID = $('.selected-entry-id').val();
-    const firstName = $('.firstName').val();
-    const lastName = $('.lastName').val();
-    const diagnosis = $('.diagnosis').val();
-    const gestationalAge = $('.gestationalAge').val();
-    const correctedGestationalAgeDay = $('.correctedGestationalAgeDay').val();
-    const correctedGestationalAgeWeek = $('.correctedGestationalAgeWeek').val();
-    const dayOfLife = $('.dayOfLife').val();
+    const characterName = $('.characterName').val();
+    const characterClass = $('.characterClass').val();
+    const characterLevel = $('.characterLevel').val();
+    const characterRace = $('.characterRace').val();
+    const alignment = $('.alignment').val();
+    const background = $('.background').val();
+    const experience = $('.experience').val();
     const dayOfBirth = $('.dayOfBirth').val();
     const timeOfBirth = $('.timeOfBirth').val();
     const birthWeight = $('.birthWeight').val();
-    const currentWeight = $('.currentWeight').val();
+    const hitPoints = $('.hitPoints').val();
     const kaiserScore = $('.kaiserScore').val();
     const bloodType = $('.bloodType').val();
     const coombs = $('.coombs').val();
     const acuity = $('.acuity').val();
-    const bedNumber = $('.bedNumber').val();
+    const gp = $('.gp').val();
     const dateOfAdmission = $('.dateOfAdmission').val();
     const timeOfAdmission = $('.timeOfAdmission').val();
     const dateOfDischarge = $('.dateOfDischarge').val();
@@ -752,17 +752,17 @@ $('#form-submit-button').on('click', function (event) {
     const phototherapyStartDate = $('.phototherapyStartDate').val();
     const phototherapyEndDate = $('.phototherapyEndDate').val();
     const phototherapySelect = $('.phototherapySelect').val();
-    if (firstName == '') {
+    if (characterName == '') {
         alert('Please enter first name.');
-    } else if (lastName == "") {
+    } else if (characterClass == "") {
         alert('Please enter last name');
-    } else if (diagnosis == "") {
-        alert('Please enter diagnosis');
-    } else if (gestationalAge == "") {
-        alert('Please enter gestational age');
-    } else if (correctedGestationalAgeDay == "") {
+    } else if (characterLevel == "") {
+        alert('Please enter characterLevel');
+    } else if (characterRace == "") {
+        alert('Please enter character race');
+    } else if (alignment == "") {
         alert('Please enter gestational age day');
-    } else if (dayOfLife == "") {
+    } else if (experience == "") {
         alert('Please enter day of life');
     } else if (dayOfBirth == "") {
         alert('Please enter day of birth');
@@ -770,7 +770,7 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter time of birth');
     } else if (birthWeight == "") {
         alert('Please enter birth weight');
-    } else if (currentWeight == "") {
+    } else if (hitPoints == "") {
         alert('Please enter current weight');
     } else if (kaiserScore == "") {
         alert('Please enter kaiser score');
@@ -780,7 +780,7 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter COOMBS score');
     } else if (acuity == null) {
         alert('Please enter acuity score');
-    } else if (bedNumber == "") {
+    } else if (gp == "") {
         alert('Please enter bed number');
     } else if (dateOfAdmission == "") {
         alert('Please enter date of admission');
@@ -810,22 +810,22 @@ $('#form-submit-button').on('click', function (event) {
 
         const generalInformationObject = {
             loggedInUser,
-            firstName,
-            lastName,
-            diagnosis,
-            gestationalAge,
-            correctedGestationalAgeDay,
-            correctedGestationalAgeWeek,
-            dayOfLife,
+            characterName,
+            characterClass,
+            characterLevel,
+            characterRace,
+            alignment,
+            background,
+            experience,
             dayOfBirth,
             timeOfBirth,
             birthWeight,
-            currentWeight,
+            hitPoints,
             kaiserScore,
             bloodType,
             coombs,
             acuity,
-            bedNumber,
+            gp,
             dateOfAdmission,
             timeOfAdmission,
             dateOfDischarge,
@@ -927,22 +927,22 @@ $('#form-submit-button').on('click', function (event) {
                     $('.selected-entry-id').val("");
                     $("#form-delete-button").hide();
                     $('.selected-entry-id').val("");
-                    $('.firstName').val("");
-                    $('.lastName').val("");
-                    $('.diagnosis').val("");
-                    $('.gestationalAge').val("");
-                    $('.correctedGestationalAgeDay').val("");
-                    $('.correctedGestationalAgeWeek').val("");
-                    $('.dayOfLife').val("");
+                    $('.characterName').val("");
+                    $('.characterClass').val("");
+                    $('.characterLevel').val("");
+                    $('.characterRace').val("");
+                    $('.alignment').val("");
+                    $('.background').val("");
+                    $('.experience').val("");
                     $('.dayOfBirth').val("");
                     $('.timeOfBirth').val("");
                     $('.birthWeight').val("");
-                    $('.currentWeight').val("");
+                    $('.hitPoints').val("");
                     $('.kaiserScore').val("");
                     $('.bloodType').val("");
                     $('.coombs').val("");
                     $('.acuity').val("");
-                    $('.bedNumber').val("");
+                    $('.gp').val("");
                     $('.dateOfAdmission').val("");
                     $('.timeOfAdmission').val("");
                     $('.dateOfDischarge').val("");
@@ -1104,22 +1104,22 @@ $('#form-submit-button').on('click', function (event) {
                     $('.selected-entry-id').val("");
                     $("#form-delete-button").hide();
                     $('.selected-entry-id').val("");
-                    $('.firstName').val("");
-                    $('.lastName').val("");
-                    $('.diagnosis').val("");
-                    $('.gestationalAge').val("");
-                    $('.correctedGestationalAgeDay').val("");
-                    $('.correctedGestationalAgeWeek').val("");
-                    $('.dayOfLife').val("");
+                    $('.characterName').val("");
+                    $('.characterClass').val("");
+                    $('.characterLevel').val("");
+                    $('.characterRace').val("");
+                    $('.alignment').val("");
+                    $('.background').val("");
+                    $('.experience').val("");
                     $('.dayOfBirth').val("");
                     $('.timeOfBirth').val("");
                     $('.birthWeight').val("");
-                    $('.currentWeight').val("");
+                    $('.hitPoints').val("");
                     $('.kaiserScore').val("");
                     $('.bloodType').val("");
                     $('.coombs').val("");
                     $('.acuity').val("");
-                    $('.bedNumber').val("");
+                    $('.gp').val("");
                     $('.dateOfAdmission').val("");
                     $('.timeOfAdmission').val("");
                     $('.dateOfDischarge').val("");
