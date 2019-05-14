@@ -111,7 +111,7 @@ Content styles
 
 .form-wrapper {
     display: block;
-    width: 80%;
+    width: 33.33%;
     margin: 2rem auto;
 }
 
@@ -152,6 +152,10 @@ Content styles
     margin-right: 1rem;
     margin-top: 1rem;
 }
+
+
+
+
 
 .radioCheck {
     display: block;
