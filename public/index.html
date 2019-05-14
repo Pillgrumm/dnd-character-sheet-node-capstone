@@ -179,7 +179,330 @@
                     </section>
                 </fieldset>
             </section>
-
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Statistics </legend>
+                    <legend class="legend-hide"><button>-</button> Statistics </legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="strength">STR</label>
+                            <input class="strength" name="strength" type="number" placeholder="0" value="-1">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Strength. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dexterity">DEX</label>
+                            <input class="dexterity" name="dexterity" type="number" value="7" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Dexterity. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="constitution">CONS</label>
+                            <input class="constitution" name="constitution" type="number" value="3" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Constitution. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="intelligence">INT</label>
+                            <input class="intelligence" name="intelligence" type="number" value="4" placeholder="0" class="sideBySide">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Intelligence. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="wisdom">WIS</label>
+                            <input class="wisdom sideBySide" name="wisdom" type="number" value="5" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Wisdom. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="charisma">CHA</label>
+                            <input class="charisma sideBySide" name="charisma" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Skills </legend>
+                    <legend class="legend-hide"><button>-</button> Skills </legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="acrobatics">Acrobatics (Dex)</label>
+                            <input class="acrobatics" name="acrobatics" type="number" placeholder="0" value="-1">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Strength. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="animalHandling">Animal Handling (Wis)</label>
+                            <input class="animalHandling" name="animalHandling" type="number" value="7" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Dexterity. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="arcana">Arcana (Int)</label>
+                            <input class="arcana" name="arcana" type="number" value="3" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Constitution. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="athletics">Athletics (Str)</label>
+                            <input class="athletics" name="athletics" type="number" value="4" placeholder="0" class="sideBySide">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Intelligence. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="deception">Deception (Cha)</label>
+                            <input class="deception sideBySide" name="deception" type="number" value="5" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Wisdom. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="history">History (Int)</label>
+                            <input class="history sideBySide" name="history" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="insight">Insight (Wis)</label>
+                            <input class="insight sideBySide" name="insight" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="intimidation">Intimidation (Cha)</label>
+                            <input class="intimidation sideBySide" name="intimidation" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="investigation">Investigation (Int)</label>
+                            <input class="investigation sideBySide" name="investigation" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="medicine">Medicine (Wis)</label>
+                            <input class="medicine sideBySide" name="medicine" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="nature">Nature (Int)</label>
+                            <input class="nature sideBySide" name="nature" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="perception">Perception (Wis)</label>
+                            <input class="perception sideBySide" name="perception" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="performance">Performance (Cha)</label>
+                            <input class="performance sideBySide" name="performance" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="persuasion">Persuasion (Cha)</label>
+                            <input class="persuasion sideBySide" name="persuasion" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="religion">Religion (Int)</label>
+                            <input class="religion sideBySide" name="religion" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="sleightOfHand">Sleight of Hand (Dex)</label>
+                            <input class="sleightOfHand sideBySide" name="sleightOfHand" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="stealth">Stealth (Dex)</label>
+                            <input class="stealth sideBySide" name="stealth" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="survival">Survival (Wis)</label>
+                            <input class="survival sideBySide" name="survival" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
+            <section role="region" class="form-wrapper">
+                <fieldset>
+                    <legend class="legend-show"><button>+</button> Dice </legend>
+                    <legend class="legend-hide"><button>-</button> Dice </legend>
+                    <section role="region" class="section-content">
+                        <div class="input-wrapper">
+                            <label for="d20">D20:</label>
+                            <input class="d20" name="d20" type="number" placeholder="0" value="-1">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Strength. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="d12">D12:</label>
+                            <input class="d12" name="d12" type="number" value="7" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Dexterity. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="d10">D10:</label>
+                            <input class="d10" name="d10" type="number" value="3" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Constitution. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="d8">D8:</label>
+                            <input class="d8" name="d8" type="number" value="4" placeholder="0" class="sideBySide">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Intelligence. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="d6">D6:</label>
+                            <input class="d6 sideBySide" name="d6" type="number" value="5" placeholder="0">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Wisdom. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="d4">D4:</label>
+                            <input class="d4 sideBySide" name="d4" type="number" placeholder="0" value="6">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Character Charisma. Not Required</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
+            </section>
             <!--
             <section role="region" class="form-wrapper fixed-cta">
                 <fieldset>
