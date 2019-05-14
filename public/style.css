@@ -20,7 +20,7 @@
 General styles */
 
 body {
-    font-family: sans-serif;
+    font-family: 'Macondo Swash Caps', cursive;
     font-size: 16px;
     background: url('./images/landing-background.jpg') no-repeat;
     background-attachment: fixed;
