@@ -53,26 +53,26 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.alignment').val(result.entries[0].alignment);
             $('.background').val(result.entries[0].background);
             $('.experience').val(result.entries[0].experience);
-            $('.dayOfBirth').val(result.entries[0].dayOfBirth);
+            $('.strength').val(result.entries[0].strength);
             $('.timeOfBirth').val(result.entries[0].timeOfBirth);
             $('.birthWeight').val(result.entries[0].birthWeight);
             $('.hitPoints').val(result.entries[0].hitPoints);
-            $('.kaiserScore').val(result.entries[0].kaiserScore);
-            $('.coombs').val(result.entries[0].coombs);
-            $('.acuity').val(result.entries[0].acuity);
+            $('.dexterity').val(result.entries[0].dexterity);
+            $('.constitution').val(result.entries[0].constitution);
+            $('.intelligence').val(result.entries[0].intelligence);
             $('.gp').val(result.entries[0].gp);
             $('.dateOfAdmission').val(result.entries[0].dateOfAdmission);
             $('.timeOfAdmission').val(result.entries[0].timeOfAdmission);
             $('.dateOfDischarge').val(result.entries[0].dateOfDischarge);
             $('.timeOfDischarge').val(result.entries[0].timeOfDischarge);
-            $('.gravida').val(result.entries[0].gravida);
+            $('.wisdom').val(result.entries[0].wisdom);
             $('.para').val(result.entries[0].para);
             $('.age').val(result.entries[0].age);
             $('.vagCs').val(result.entries[0].vagCs);
             $('.apgar1').val(result.entries[0].apgar1);
             $('.apgar2').val(result.entries[0].apgar2);
             $('.rom').val(result.entries[0].rom);
-            $('.hx').val(result.entries[0].hx);
+            $('.charisma').val(result.entries[0].charisma);
             checkInputByValue(result, 'husCheck', 'husCheck');
             $('.husText').val(result.entries[0].husText);
             checkInputByValue(result, 'respiratoryOptions', 'RA');
@@ -221,27 +221,27 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.alignment').val("");
         $('.background').val("");
         $('.experience').val("");
-        $('.dayOfBirth').val("");
+        $('.strength').val("");
         $('.timeOfBirth').val("");
         $('.birthWeight').val("");
         $('.hitPoints').val("");
-        $('.kaiserScore').val("");
+        $('.dexterity').val("");
         $('.bloodType').val("");
-        $('.coombs').val("");
-        $('.acuity').val("");
+        $('.constitution').val("");
+        $('.intelligence').val("");
         $('.gp').val("");
         $('.dateOfAdmission').val("");
         $('.timeOfAdmission').val("");
         $('.dateOfDischarge').val("");
         $('.timeOfDischarge').val("");
-        $('.gravida').val("");
+        $('.wisdom').val("");
         $('.para').val("");
         $('.age').val("");
         $('.vagCs').val("");
         $('.apgar1').val("");
         $('.apgar2').val("");
         $('.rom').val("");
-        $('.hx').val("");
+        $('.charisma').val("");
         $("input[name='husCheck']:checked").attr({
             checked: false
         });
@@ -489,27 +489,27 @@ $('#form-delete-button').on('click', function (event) {
             $('.alignment').val("");
             $('.background').val("");
             $('.experience').val("");
-            $('.dayOfBirth').val("");
+            $('.strength').val("");
             $('.timeOfBirth').val("");
             $('.birthWeight').val("");
             $('.hitPoints').val("");
-            $('.kaiserScore').val("");
+            $('.dexterity').val("");
             $('.bloodType').val("");
-            $('.coombs').val("");
-            $('.acuity').val("");
+            $('.constitution').val("");
+            $('.intelligence').val("");
             $('.gp').val("");
             $('.dateOfAdmission').val("");
             $('.timeOfAdmission').val("");
             $('.dateOfDischarge').val("");
             $('.timeOfDischarge').val("");
-            $('.gravida').val("");
+            $('.wisdom').val("");
             $('.para').val("");
             $('.age').val("");
             $('.vagCs').val("");
             $('.apgar1').val("");
             $('.apgar2').val("");
             $('.rom').val("");
-            $('.hx').val("");
+            $('.charisma').val("");
             $("input[name='husCheck']:checked").attr({
                 checked: false
             });
@@ -658,27 +658,27 @@ $('#form-submit-button').on('click', function (event) {
     const alignment = $('.alignment').val();
     const background = $('.background').val();
     const experience = $('.experience').val();
-    const dayOfBirth = $('.dayOfBirth').val();
+    const strength = $('.strength').val();
     const timeOfBirth = $('.timeOfBirth').val();
     const birthWeight = $('.birthWeight').val();
     const hitPoints = $('.hitPoints').val();
-    const kaiserScore = $('.kaiserScore').val();
+    const dexterity = $('.dexterity').val();
     const bloodType = $('.bloodType').val();
-    const coombs = $('.coombs').val();
-    const acuity = $('.acuity').val();
+    const constitution = $('.constitution').val();
+    const intelligence = $('.intelligence').val();
     const gp = $('.gp').val();
     const dateOfAdmission = $('.dateOfAdmission').val();
     const timeOfAdmission = $('.timeOfAdmission').val();
     const dateOfDischarge = $('.dateOfDischarge').val();
     const timeOfDischarge = $('.timeOfDischarge').val();
-    const gravida = $('.gravida').val();
+    const wisdom = $('.wisdom').val();
     const para = $('.para').val();
     const age = $('.age').val();
     const vagCs = $('.vagCs').val();
     const apgar1 = $('.apgar1').val();
     const apgar2 = $('.apgar2').val();
     const rom = $('.rom').val();
-    const hx = $('.hx').val();
+    const charisma = $('.charisma').val();
     const husCheck = $("input[name='husCheck']:checked").val();
     const husText = $('.husText').val();
     const respiratoryOptions = $("input[name='respiratory']:checked").val();
@@ -764,7 +764,7 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter gestational age day');
     } else if (experience == "") {
         alert('Please enter day of life');
-    } else if (dayOfBirth == "") {
+    } else if (strength == "") {
         alert('Please enter day of birth');
     } else if (timeOfBirth == "") {
         alert('Please enter time of birth');
@@ -772,22 +772,22 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter birth weight');
     } else if (hitPoints == "") {
         alert('Please enter current weight');
-    } else if (kaiserScore == "") {
+    } else if (dexterity == "") {
         alert('Please enter kaiser score');
     } else if (bloodType == null) {
         alert('Please enter bloodtype');
-    } else if (coombs == null) {
-        alert('Please enter COOMBS score');
-    } else if (acuity == null) {
-        alert('Please enter acuity score');
+    } else if (constitution == null) {
+        alert('Please enter constitution score');
+    } else if (intelligence == null) {
+        alert('Please enter intelligence score');
     } else if (gp == "") {
         alert('Please enter bed number');
     } else if (dateOfAdmission == "") {
         alert('Please enter date of admission');
     } else if (timeOfAdmission == "") {
         alert('Please enter time of admission');
-    } else if (gravida == '') {
-        alert('Please enter gravida count');
+    } else if (wisdom == '') {
+        alert('Please enter wisdom count');
     } else if (para == "") {
         alert('Please enter para count');
     } else if (age == "") {
@@ -798,7 +798,7 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter digit for first APGAR selection');
     } else if (apgar2 == null) {
         alert('Please enter maternal rupture of membranes');
-    } else if (hx == "") {
+    } else if (charisma == "") {
         alert('Please enter maternal history');
     } else if (maternalBloodType == null) {
         alert('Please enter maternal bloodtype');
@@ -817,27 +817,27 @@ $('#form-submit-button').on('click', function (event) {
             alignment,
             background,
             experience,
-            dayOfBirth,
+            strength,
             timeOfBirth,
             birthWeight,
             hitPoints,
-            kaiserScore,
+            dexterity,
             bloodType,
-            coombs,
-            acuity,
+            constitution,
+            intelligence,
             gp,
             dateOfAdmission,
             timeOfAdmission,
             dateOfDischarge,
             timeOfDischarge,
-            gravida,
+            wisdom,
             para,
             age,
             vagCs,
             apgar1,
             apgar2,
             rom,
-            hx,
+            charisma,
             maternalBloodType,
             husCheck,
             husText,
@@ -934,27 +934,27 @@ $('#form-submit-button').on('click', function (event) {
                     $('.alignment').val("");
                     $('.background').val("");
                     $('.experience').val("");
-                    $('.dayOfBirth').val("");
+                    $('.strength').val("");
                     $('.timeOfBirth').val("");
                     $('.birthWeight').val("");
                     $('.hitPoints').val("");
-                    $('.kaiserScore').val("");
+                    $('.dexterity').val("");
                     $('.bloodType').val("");
-                    $('.coombs').val("");
-                    $('.acuity').val("");
+                    $('.constitution').val("");
+                    $('.intelligence').val("");
                     $('.gp').val("");
                     $('.dateOfAdmission').val("");
                     $('.timeOfAdmission').val("");
                     $('.dateOfDischarge').val("");
                     $('.timeOfDischarge').val("");
-                    $('.gravida').val("");
+                    $('.wisdom').val("");
                     $('.para').val("");
                     $('.age').val("");
                     $('.vagCs').val("");
                     $('.apgar1').val("");
                     $('.apgar2').val("");
                     $('.rom').val("");
-                    $('.hx').val("");
+                    $('.charisma').val("");
                     $("input[name='husCheck']:checked").attr({
                         checked: false
                     });
@@ -1111,27 +1111,27 @@ $('#form-submit-button').on('click', function (event) {
                     $('.alignment').val("");
                     $('.background').val("");
                     $('.experience').val("");
-                    $('.dayOfBirth').val("");
+                    $('.strength').val("");
                     $('.timeOfBirth').val("");
                     $('.birthWeight').val("");
                     $('.hitPoints').val("");
-                    $('.kaiserScore').val("");
+                    $('.dexterity').val("");
                     $('.bloodType').val("");
-                    $('.coombs').val("");
-                    $('.acuity').val("");
+                    $('.constitution').val("");
+                    $('.intelligence').val("");
                     $('.gp').val("");
                     $('.dateOfAdmission').val("");
                     $('.timeOfAdmission').val("");
                     $('.dateOfDischarge').val("");
                     $('.timeOfDischarge').val("");
-                    $('.gravida').val("");
+                    $('.wisdom').val("");
                     $('.para').val("");
                     $('.age').val("");
                     $('.vagCs').val("");
                     $('.apgar1').val("");
                     $('.apgar2').val("");
                     $('.rom').val("");
-                    $('.hx').val("");
+                    $('.charisma').val("");
                     $("input[name='husCheck']:checked").attr({
                         checked: false
                     });

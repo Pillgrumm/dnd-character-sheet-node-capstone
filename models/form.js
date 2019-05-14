@@ -49,7 +49,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    timeOfBirth: {
+    strength: {
         type: String,
         required: false,
         default: ""
@@ -64,7 +64,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    kaiserScore: {
+    dexterity: {
         type: String,
         required: false,
         default: ""
@@ -74,12 +74,12 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    coombs: {
+    constitution: {
         type: String,
         required: false,
         default: ""
     },
-    acuity: {
+    intelligence: {
         type: String,
         required: false,
         default: ""
@@ -109,7 +109,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    gravida: {
+    wisdom: {
         type: Number,
         required: false,
         default: ""
@@ -144,7 +144,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    hx: {
+    charisma: {
         type: String,
         required: false,
         default: ""
