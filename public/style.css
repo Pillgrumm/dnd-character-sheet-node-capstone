@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     border: 0;
@@ -25,6 +27,7 @@ body {
     background: url('./images/landing-background.jpg') no-repeat;
     background-attachment: fixed;
     position: relative;
+    background-size: cover;
 }
 
 .greyText::placeholder {
@@ -58,6 +61,12 @@ input[type='radio'] {
     margin-right: 0.1rem !important;
 }
 
+.sideBar {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    background-color: #81c784;
+    z-index: 1;
+}
 
 /* -------------------------------------
 Header styles
@@ -76,6 +85,7 @@ Header styles
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    border
 }
 
 /* -------------------------------------
@@ -113,15 +123,16 @@ Content styles
 }
 
 .form-wrapper fieldset {
-    border: 1px solid blue;
+    border: 1px solid black;
     padding: 1rem;
     font-size: 1.5rem;
+    background-color: beige;
 }
 
 .form-wrapper fieldset label,
 .form-wrapper fieldset input,
 .form-wrapper fieldset select {
-    display: block;
+    display: inline-block;
     width: 30%;
     padding: 0.5rem;
     font-size: 1.1rem;
@@ -201,7 +212,7 @@ Content styles
     margin-right: 15px;
     font-size: 16px;
     background-color: transparent;
-    border: 1px solid blue;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
@@ -218,7 +229,7 @@ Content styles
 
 .fixed-cta fieldset {
     border: 0;
-    border-top: 1px solid blue;
+    border-top: 1px solid black;
 }
 
 .last-wrapper {
@@ -227,12 +238,12 @@ Content styles
 
 
 .authentication-box {
-    background: white;
+    background-color: rgb(202, 179, 160);
     width: 300px;
     border-radius: 6px;
     margin: 2rem auto;
     padding: 0px 0px 70px 0px;
-    border: 1px solid blue;
+    border: 1px solid black;
     display: block;
     margin-bottom: 10px;
 }
@@ -302,6 +313,9 @@ p {
     text-align: center;
 }
 
+.full-form {
+    border: black;
+}
 
 /* -------------------------------------
 Footer styles
