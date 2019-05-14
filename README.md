@@ -3,34 +3,11 @@ Live Preview with react @ https://dnd-character-sheet-react.herokuapp.com/
 
 Live Preview with Node https://dnd-character-sheet-node.herokuapp.com/
 
-This application is meant to be used for the medical staff of a neonatal intensive care unit. The staff will be able to keep record
-of patient information simply by logging into their units (or personal) account to get a list of existing patient records, while
-also being able to update existing records and add brand new ones.
-
-I am not in the medical field myself but my father is; he pitched this as an idea and it was decided that this would be a very good project to practice building a full stack application.
+Description Here
 
 ## Screenshots
-Landing Page/Login Page ![Landing Page](public/github-images/landing-page.JPG)
 
-Registration Page ![Registration Page](public/github-images/registration-page.JPG)
-
-Main Page(No Patient Selected) ![Main Page No Patient](public/github-images/main-page-no-patient.JPG)
-
-Main Page(Patient Selected) ![Main Page Patient](public/github-images/main-page-patient.JPG)
-
-General Information Field ![General Information Field](public/github-images/general-field.JPG)
-
-Patient Added Alert ![Patient Added](public/github-images/patient-added.JPG)
-
-Patient Updated Alert ![Patient Updated](public/github-images/patient-updated.JPG)
-
-Patient Deleted Alert ![Patient Deleted](public/github-images/patient-deleted.JPG)
-
-Login Error ![Login Error](public/github-images/login-error.JPG)
-
-Register Error ![Register Error](public/github-images/register-error.JPG)
-
-Required Field Error ![Required Field Error](public/github-images/required-field-error.JPG)
+Screenshots Here
 
 ## User Stories
 **Landing Page**
@@ -51,19 +28,19 @@ Required Field Error ![Required Field Error](public/github-images/required-field
 
   As a user, I will also be able to click the regstier button after inputting my account information taking me to the main form.
 
-  **Main Page**
+  **Character Page**
 
-  As a user, I will be able to see the upper container which holds prexisting patient names in a dropdown bar (if existing).
+  As a user, I will be able to see the left hand table which holds prexisting character names. (if existing).
 
-  As a user, I will be able to click/select a patient name, doing so I will see the every field populated based on the previous entries for that patient.
+  As a user, I will be able to click/select a character name, doing so I will see the every field populated based on the previous entries for that character.
 
-  As a user, I will also see a delete button when a patient name is selected.
+  As a user, I will also be able to see the characters name I selected, if no character is selected the fields will be empty and the name will say 'Create New Chracter'.
 
-  As a user, if I save the patient information, I will see all fields populate back to nothing, and the patient name and will be added to the dropdown bar and fields will be saved for that patient.
+  As a user, I will also see a delete button on the bottom right when a character name is selected and the form is populated.
 
-  As a user, if I save the patient currently selected, I will see all fields populate back to nothing, and the patient name (if changed) will be updated within the dropdown bar, as well as any modified fields.
+  As a user, if I save the character information, I will see a 'saved' notification, and the character name and will be added to the left-hand table and fields will be saved for that character.
 
-  As a user, if I delete the patient currently selected, I will see all fields populate back to nothing, and the patient name will be removed from the dropdown bar.
+  As a user, if I delete the character currently selected, I will see all fields populate back to nothing, and the character name will be removed from the left-hand table.
 
 ## Technical
 
@@ -75,6 +52,7 @@ Required Field Error ![Required Field Error](public/github-images/required-field
 * CSS3
 * JavaScript
 * jQuery
+* React
 
 #### Back End
 
@@ -90,10 +68,7 @@ Required Field Error ![Required Field Error](public/github-images/required-field
 </ul>
 
 ## Development Road Map
-Features for future iterations include:
-- Add ability to save at any point during entering fields.
-- Added security so the application can potentially be used in a real setting.
-- Automatic logout after inactivity
+
 
 ## Node command lines
 * npm install ==> install all node modules
