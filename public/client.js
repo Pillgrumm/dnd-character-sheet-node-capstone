@@ -49,7 +49,7 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.characterClass').val(result.entries[0].characterClass);
             $('.characterLevel').val(result.entries[0].characterLevel);
             $('.characterRace').val(result.entries[0].characterRace);
-            $('.bloodType').val(result.entries[0].bloodType);
+            $('.insight').val(result.entries[0].insight);
             $('.alignment').val(result.entries[0].alignment);
             $('.background').val(result.entries[0].background);
             $('.experience').val(result.entries[0].experience);
@@ -61,42 +61,42 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.constitution').val(result.entries[0].constitution);
             $('.intelligence').val(result.entries[0].intelligence);
             $('.gp').val(result.entries[0].gp);
-            $('.dateOfAdmission').val(result.entries[0].dateOfAdmission);
-            $('.timeOfAdmission').val(result.entries[0].timeOfAdmission);
-            $('.dateOfDischarge').val(result.entries[0].dateOfDischarge);
-            $('.timeOfDischarge').val(result.entries[0].timeOfDischarge);
+            $('.acrobatics').val(result.entries[0].acrobatics);
+            $('.animalHandling').val(result.entries[0].animalHandling);
+            $('.arcana').val(result.entries[0].arcana);
+            $('.athletics').val(result.entries[0].athletics);
             $('.wisdom').val(result.entries[0].wisdom);
             $('.para').val(result.entries[0].para);
             $('.age').val(result.entries[0].age);
-            $('.vagCs').val(result.entries[0].vagCs);
-            $('.apgar1').val(result.entries[0].apgar1);
-            $('.apgar2').val(result.entries[0].apgar2);
+            $('.deception').val(result.entries[0].deception);
+            $('.intimidation').val(result.entries[0].intimidation);
+            $('.investigation').val(result.entries[0].investigation);
             $('.rom').val(result.entries[0].rom);
             $('.charisma').val(result.entries[0].charisma);
             checkInputByValue(result, 'husCheck', 'husCheck');
-            $('.husText').val(result.entries[0].husText);
+            $('.performance').val(result.entries[0].performance);
             checkInputByValue(result, 'respiratoryOptions', 'RA');
             checkInputByValue(result, 'respiratoryOptions', 'VENT');
             checkInputByValue(result, 'respiratoryOptions', 'HFNC');
             checkInputByValue(result, 'respiratoryOptions', 'VT');
             checkInputByValue(result, 'respiratoryOptions', 'CPAP');
-            $('.respiratoryText').val(result.entries[0].respiratoryText);
+            $('.perception').val(result.entries[0].perception);
             $('.fio2').val(result.entries[0].fio2);
             $('.abdpb').val(result.entries[0].abdpb);
             checkInputByValue(result, 'murmur', 'murmur');
             checkInputByValue(result, 'echo', 'echo');
             $('.cardiacResults').val(result.entries[0].cardiacResults);
             $('.meds').val(result.entries[0].meds);
-            $('.maternalBloodType').val(result.entries[0].maternalBloodType);
+            $('.history').val(result.entries[0].history);
             checkInputByValue(result, 'cbc', 'cbc');
             checkInputByValue(result, 'tb', 'tb');
             checkInputByValue(result, 'bmp', 'bmp');
             checkInputByValue(result, 'crp', 'crp');
             checkInputByValue(result, 'tg', 'tg');
-            $('.labsTestsText').val(result.entries[0].labsTestsText);
+            $('.persuasion').val(result.entries[0].persuasion);
             $('.qtuLabs').val(result.entries[0].qtuLabs);
             checkInputByValue(result, 'troughCheck', 'troughCheck');
-            $('.troughText').val(result.entries[0].troughText);
+            $('.medicine').val(result.entries[0].medicine);
             $('.dateOfTrough').val(result.entries[0].dateOfTrough);
             $('.timeOfTrough').val(result.entries[0].timeOfTrough);
             checkInputByValue(result, 'cxrCheck', 'cxrCheck');
@@ -108,7 +108,7 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.newbornScreenDate').val(result.entries[0].newbornScreenDate);
             $('.cchdEchoText').val(result.entries[0].cchdEchoText);
             $('.eyeExamDate').val(result.entries[0].eyeExamDate);
-            $('.eyeExamText').val(result.entries[0].eyeExamText);
+            $('.religion').val(result.entries[0].religion);
             $('.fuDate').val(result.entries[0].fuDate);
             checkInputByValue(result, 'hearingCheck', 'hearingCheck');
             checkInputByValue(result, 'carSeatCheck', 'carSeatCheck');
@@ -119,15 +119,15 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             checkInputByValue(result, 'uacCheck', 'uacCheck');
             checkInputByValue(result, 'uvcCheck', 'uvcCheck');
             checkInputByValue(result, 'salineLockCheck', 'salineLockCheck');
-            $('.drugInput').val(result.entries[0].drugInput);
+            $('.stealth').val(result.entries[0].stealth);
             $('.ccDrug').val(result.entries[0].ccDrug);
             $('.hrDrug').val(result.entries[0].hrDrug);
-            $('.tDrugInput').val(result.entries[0].tDrugInput);
+            $('.sleightOfHand').val(result.entries[0].sleightOfHand);
             $('.ccTDrug').val(result.entries[0].ccTDrug);
             $('.hrTDrug').val(result.entries[0].hrTDrug);
             $('.ccIl').val(result.entries[0].ccIl);
             $('.hrIl').val(result.entries[0].hrIl);
-            $('.drugNotes').val(result.entries[0].drugNotes);
+            $('.nature').val(result.entries[0].nature);
             $('.feedingMethod').val(result.entries[0].feedingMethod);
             checkInputByValue(result, 'adLib', 'adLib');
             checkInputByValue(result, 'cueBased', 'cueBased');
@@ -137,7 +137,7 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.completedAttempts').val(result.entries[0].completedAttempts);
             $('.planOfCare').val(result.entries[0].planOfCare);
             $('.socialConsiderations').val(result.entries[0].socialConsiderations);
-            $('.historyChanges').val(result.entries[0].historyChanges);
+            $('.survival').val(result.entries[0].survival);
             $('.referalls').val(result.entries[0].referalls);
             checkInputByValue(result, 'synagis', 'synagis');
             checkInputByValue(result, 'vaccine', 'vaccine');
@@ -226,30 +226,30 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.birthWeight').val("");
         $('.hitPoints').val("");
         $('.dexterity').val("");
-        $('.bloodType').val("");
+        $('.insight').val("");
         $('.constitution').val("");
         $('.intelligence').val("");
         $('.gp').val("");
-        $('.dateOfAdmission').val("");
-        $('.timeOfAdmission').val("");
-        $('.dateOfDischarge').val("");
-        $('.timeOfDischarge').val("");
+        $('.acrobatics').val("");
+        $('.animalHandling').val("");
+        $('.arcana').val("");
+        $('.athletics').val("");
         $('.wisdom').val("");
         $('.para').val("");
         $('.age').val("");
-        $('.vagCs').val("");
-        $('.apgar1').val("");
-        $('.apgar2').val("");
+        $('.deception').val("");
+        $('.intimidation').val("");
+        $('.investigation').val("");
         $('.rom').val("");
         $('.charisma').val("");
         $("input[name='husCheck']:checked").attr({
             checked: false
         });
-        $('.husText').val("");
+        $('.performance').val("");
         $("input[name='respiratory']:checked").attr({
             checked: false
         });
-        $('.respiratoryText').val("");
+        $('.perception').val("");
         $('.fio2').val("");
         $('.abdpb').val("");
         $("input[name='murmur']:checked").attr({
@@ -260,7 +260,7 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         });
         $('.cardiacResults').val("");
         $('.meds').val("");
-        $('.maternalBloodType').val("");
+        $('.history').val("");
         $("input[name='cbc']:checked").attr({
             checked: false
         });
@@ -276,12 +276,12 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $("input[name='tg']:checked").attr({
             checked: false
         });
-        $('.labsTestsText').val("");
+        $('.persuasion').val("");
         $('.qtuLabs').val("");
         $("input[name='troughCheck']:checked").attr({
             checked: false
         });
-        $('.troughText').val("");
+        $('.medicine').val("");
         $('.dateOfTrough').val("");
         $('.timeOfTrough').val("");
         $("input[name='cxrCheck']:checked").attr({
@@ -297,7 +297,7 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.newbornScreenDate').val("");
         $('.cchdEchoText').val("");
         $('.eyeExamDate').val("");
-        $('.eyeExamText').val("");
+        $('.religion').val("");
         $('.fuDate').val("");
         $("input[name='hearingCheck']:checked").attr({
             checked: false
@@ -326,15 +326,15 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $("input[name='salineLockCheck']:checked").attr({
             checked: false
         });
-        $('.drugInput').val("");
+        $('.stealth').val("");
         $('.ccDrug').val("");
         $('.hrDrug').val("");
-        $('.tDrugInput').val("");
+        $('.sleightOfHand').val("");
         $('.ccTDrug').val("");
         $('.hrTDrug').val("");
         $('.ccIl').val("");
         $('.hrIl').val("");
-        $('.drugNotes').val("");
+        $('.nature').val("");
         $('.feedingMethod').val("");
         $("input[name='adLib']:checked").attr({
             checked: false
@@ -348,7 +348,7 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.completedAttempts').val("");
         $('.planOfCare').val("");
         $('.socialConsiderations').val("");
-        $('.historyChanges').val("");
+        $('.survival').val("");
         $('.referalls').val("");
         $("input[name='synagis']:checked").attr({
             checked: false
@@ -494,30 +494,30 @@ $('#form-delete-button').on('click', function (event) {
             $('.birthWeight').val("");
             $('.hitPoints').val("");
             $('.dexterity').val("");
-            $('.bloodType').val("");
+            $('.insight').val("");
             $('.constitution').val("");
             $('.intelligence').val("");
             $('.gp').val("");
-            $('.dateOfAdmission').val("");
-            $('.timeOfAdmission').val("");
-            $('.dateOfDischarge').val("");
-            $('.timeOfDischarge').val("");
+            $('.acrobatics').val("");
+            $('.animalHandling').val("");
+            $('.arcana').val("");
+            $('.athletics').val("");
             $('.wisdom').val("");
             $('.para').val("");
             $('.age').val("");
-            $('.vagCs').val("");
-            $('.apgar1').val("");
-            $('.apgar2').val("");
+            $('.deception').val("");
+            $('.intimidation').val("");
+            $('.investigation').val("");
             $('.rom').val("");
             $('.charisma').val("");
             $("input[name='husCheck']:checked").attr({
                 checked: false
             });
-            $('.husText').val("");
+            $('.performance').val("");
             $("input[name='respiratory']:checked").attr({
                 checked: false
             });
-            $('.respiratoryText').val("");
+            $('.perception').val("");
             $('.fio2').val("");
             $('.abdpb').val("");
             $("input[name='murmur']:checked").attr({
@@ -528,7 +528,7 @@ $('#form-delete-button').on('click', function (event) {
             });
             $('.cardiacResults').val("");
             $('.meds').val("");
-            $('.maternalBloodType').val("");
+            $('.history').val("");
             $("input[name='cbc']:checked").attr({
                 checked: false
             });
@@ -544,12 +544,12 @@ $('#form-delete-button').on('click', function (event) {
             $("input[name='tg']:checked").attr({
                 checked: false
             });
-            $('.labsTestsText').val("");
+            $('.persuasion').val("");
             $('.qtuLabs').val("");
             $("input[name='troughCheck']:checked").attr({
                 checked: false
             });
-            $('.troughText').val("");
+            $('.medicine').val("");
             $('.dateOfTrough').val("");
             $('.timeOfTrough').val("");
             $("input[name='cxrCheck']:checked").attr({
@@ -565,7 +565,7 @@ $('#form-delete-button').on('click', function (event) {
             $('.newbornScreenDate').val("");
             $('.cchdEchoText').val("");
             $('.eyeExamDate').val("");
-            $('.eyeExamText').val("");
+            $('.religion').val("");
             $('.fuDate').val("");
             $("input[name='hearingCheck']:checked").attr({
                 checked: false
@@ -594,15 +594,15 @@ $('#form-delete-button').on('click', function (event) {
             $("input[name='salineLockCheck']:checked").attr({
                 checked: false
             });
-            $('.drugInput').val("");
+            $('.stealth').val("");
             $('.ccDrug').val("");
             $('.hrDrug').val("");
-            $('.tDrugInput').val("");
+            $('.sleightOfHand').val("");
             $('.ccTDrug').val("");
             $('.hrTDrug').val("");
             $('.ccIl').val("");
             $('.hrIl').val("");
-            $('.drugNotes').val("");
+            $('.nature').val("");
             $('.feedingMethod').val("");
             $("input[name='adLib']:checked").attr({
                 checked: false
@@ -616,7 +616,7 @@ $('#form-delete-button').on('click', function (event) {
             $('.completedAttempts').val("");
             $('.planOfCare').val("");
             $('.socialConsiderations').val("");
-            $('.historyChanges').val("");
+            $('.survival').val("");
             $('.referalls').val("");
             $("input[name='synagis']:checked").attr({
                 checked: false
@@ -663,42 +663,42 @@ $('#form-submit-button').on('click', function (event) {
     const birthWeight = $('.birthWeight').val();
     const hitPoints = $('.hitPoints').val();
     const dexterity = $('.dexterity').val();
-    const bloodType = $('.bloodType').val();
+    const insight = $('.insight').val();
     const constitution = $('.constitution').val();
     const intelligence = $('.intelligence').val();
     const gp = $('.gp').val();
-    const dateOfAdmission = $('.dateOfAdmission').val();
-    const timeOfAdmission = $('.timeOfAdmission').val();
-    const dateOfDischarge = $('.dateOfDischarge').val();
-    const timeOfDischarge = $('.timeOfDischarge').val();
+    const acrobatics = $('.acrobatics').val();
+    const animalHandling = $('.animalHandling').val();
+    const arcana = $('.arcana').val();
+    const athletics = $('.athletics').val();
     const wisdom = $('.wisdom').val();
     const para = $('.para').val();
     const age = $('.age').val();
-    const vagCs = $('.vagCs').val();
-    const apgar1 = $('.apgar1').val();
-    const apgar2 = $('.apgar2').val();
+    const deception = $('.deception').val();
+    const intimidation = $('.intimidation').val();
+    const investigation = $('.investigation').val();
     const rom = $('.rom').val();
     const charisma = $('.charisma').val();
     const husCheck = $("input[name='husCheck']:checked").val();
-    const husText = $('.husText').val();
+    const performance = $('.performance').val();
     const respiratoryOptions = $("input[name='respiratory']:checked").val();
-    const respiratoryText = $('.respiratoryText').val();
+    const perception = $('.perception').val();
     const fio2 = $('.fio2').val();
     const abdpb = $('.abdpb').val();
     const murmur = $("input[name='murmur']:checked").val();
     const echo = $("input[name='echo']:checked").val();
     const cardiacResults = $('.cardiacResults').val();
     const meds = $('.meds').val();
-    const maternalBloodType = $('.maternalBloodType').val();
+    const history = $('.history').val();
     const cbc = $("input[name='cbc']:checked").val();
     const tb = $("input[name='tb']:checked").val();
     const bmp = $("input[name='bmp']:checked").val();
     const crp = $("input[name='crp']:checked").val();
     const tg = $("input[name='tg']:checked").val();
-    const labsTestsText = $('.labsTestsText').val();
+    const persuasion = $('.persuasion').val();
     const qtuLabs = $('.qtuLabs').val();
     const troughCheck = $("input[name='troughCheck']:checked").val();
-    const troughText = $('.troughText').val();
+    const medicine = $('.medicine').val();
     const dateOfTrough = $('.dateOfTrough').val();
     const timeOfTrough = $('.timeOfTrough').val();
     const cxrCheck = $("input[name='cxrCheck']:checked").val();
@@ -710,7 +710,7 @@ $('#form-submit-button').on('click', function (event) {
     const newbornScreenDate = $('.newbornScreenDate').val();
     const cchdEchoText = $('.cchdEchoText').val();
     const eyeExamDate = $('.eyeExamDate').val();
-    const eyeExamText = $('.eyeExamText').val();
+    const religion = $('.religion').val();
     const fuDate = $('.fuDate').val();
     const hearingCheck = $("input[name='hearingCheck']:checked").val();
     const carSeatCheck = $("input[name='carSeatCheck']:checked").val();
@@ -721,15 +721,15 @@ $('#form-submit-button').on('click', function (event) {
     const uacCheck = $("input[name='uacCheck']:checked").val();
     const uvcCheck = $("input[name='uvcCheck']:checked").val();
     const salineLockCheck = $("input[name='salineLockCheck']:checked").val();
-    const drugInput = $('.drugInput').val();
+    const stealth = $('.stealth').val();
     const ccDrug = $('.ccDrug').val();
     const hrDrug = $('.hrDrug').val();
-    const tDrugInput = $('.tDrugInput').val();
+    const sleightOfHand = $('.sleightOfHand').val();
     const ccTDrug = $('.ccTDrug').val();
     const hrTDrug = $('.hrTDrug').val();
     const ccIl = $('.ccIl').val();
     const hrIl = $('.hrIl').val();
-    const drugNotes = $('.drugNotes').val();
+    const nature = $('.nature').val();
     const feedingMethod = $('.feedingMethod').val();
     const adLib = $("input[name='adLib']:checked").val();
     const cueBased = $("input[name='cueBased']").val();
@@ -739,7 +739,7 @@ $('#form-submit-button').on('click', function (event) {
     const completedAttempts = $('.completedAttempts').val();
     const planOfCare = $('.planOfCare').val();
     const socialConsiderations = $('.socialConsiderations').val();
-    const historyChanges = $('.historyChanges').val();
+    const survival = $('.survival').val();
     const referalls = $('.referalls').val();
     const synagis = $("input[name='synagis']:checked").val();
     const vaccine = $("input[name='vaccine']:checked").val();
@@ -774,17 +774,17 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter current weight');
     } else if (dexterity == "") {
         alert('Please enter kaiser score');
-    } else if (bloodType == null) {
-        alert('Please enter bloodtype');
+    } else if (insight == null) {
+        alert('Please enter insight');
     } else if (constitution == null) {
         alert('Please enter constitution score');
     } else if (intelligence == null) {
         alert('Please enter intelligence score');
     } else if (gp == "") {
         alert('Please enter bed number');
-    } else if (dateOfAdmission == "") {
+    } else if (acrobatics == "") {
         alert('Please enter date of admission');
-    } else if (timeOfAdmission == "") {
+    } else if (animalHandling == "") {
         alert('Please enter time of admission');
     } else if (wisdom == '') {
         alert('Please enter wisdom count');
@@ -792,16 +792,16 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter para count');
     } else if (age == "") {
         alert('Please enter maternal age');
-    } else if (vagCs == null) {
+    } else if (deception == null) {
         alert('Please specify birth type');
-    } else if (apgar1 == null) {
+    } else if (intimidation == null) {
         alert('Please enter digit for first APGAR selection');
-    } else if (apgar2 == null) {
+    } else if (investigation == null) {
         alert('Please enter maternal rupture of membranes');
     } else if (charisma == "") {
         alert('Please enter maternal history');
-    } else if (maternalBloodType == null) {
-        alert('Please enter maternal bloodtype');
+    } else if (history == null) {
+        alert('Please enter maternal insight');
     } else if (fio2 == "") {
         alert('Please enter FIO2 percentage');
     } else if (feedingMethod == null) {
@@ -822,27 +822,27 @@ $('#form-submit-button').on('click', function (event) {
             birthWeight,
             hitPoints,
             dexterity,
-            bloodType,
+            insight,
             constitution,
             intelligence,
             gp,
-            dateOfAdmission,
-            timeOfAdmission,
-            dateOfDischarge,
-            timeOfDischarge,
+            acrobatics,
+            animalHandling,
+            arcana,
+            athletics,
             wisdom,
             para,
             age,
-            vagCs,
-            apgar1,
-            apgar2,
+            deception,
+            intimidation,
+            investigation,
             rom,
             charisma,
-            maternalBloodType,
+            history,
             husCheck,
-            husText,
+            performance,
             respiratoryOptions,
-            respiratoryText,
+            perception,
             fio2,
             abdpb,
             murmur,
@@ -854,10 +854,10 @@ $('#form-submit-button').on('click', function (event) {
             bmp,
             crp,
             tg,
-            labsTestsText,
+            persuasion,
             qtuLabs,
             troughCheck,
-            troughText,
+            medicine,
             dateOfTrough,
             timeOfTrough,
             cxrCheck,
@@ -869,7 +869,7 @@ $('#form-submit-button').on('click', function (event) {
             newbornScreenDate,
             cchdEchoText,
             eyeExamDate,
-            eyeExamText,
+            religion,
             fuDate,
             hearingCheck,
             carSeatCheck,
@@ -880,15 +880,15 @@ $('#form-submit-button').on('click', function (event) {
             uacCheck,
             uvcCheck,
             salineLockCheck,
-            drugInput,
+            stealth,
             ccDrug,
             hrDrug,
-            tDrugInput,
+            sleightOfHand,
             ccTDrug,
             hrTDrug,
             ccIl,
             hrIl,
-            drugNotes,
+            nature,
             feedingMethod,
             adLib,
             cueBased,
@@ -898,7 +898,7 @@ $('#form-submit-button').on('click', function (event) {
             completedAttempts,
             planOfCare,
             socialConsiderations,
-            historyChanges,
+            survival,
             referalls,
             synagis,
             vaccine,
@@ -939,30 +939,30 @@ $('#form-submit-button').on('click', function (event) {
                     $('.birthWeight').val("");
                     $('.hitPoints').val("");
                     $('.dexterity').val("");
-                    $('.bloodType').val("");
+                    $('.insight').val("");
                     $('.constitution').val("");
                     $('.intelligence').val("");
                     $('.gp').val("");
-                    $('.dateOfAdmission').val("");
-                    $('.timeOfAdmission').val("");
-                    $('.dateOfDischarge').val("");
-                    $('.timeOfDischarge').val("");
+                    $('.acrobatics').val("");
+                    $('.animalHandling').val("");
+                    $('.arcana').val("");
+                    $('.athletics').val("");
                     $('.wisdom').val("");
                     $('.para').val("");
                     $('.age').val("");
-                    $('.vagCs').val("");
-                    $('.apgar1').val("");
-                    $('.apgar2').val("");
+                    $('.deception').val("");
+                    $('.intimidation').val("");
+                    $('.investigation').val("");
                     $('.rom').val("");
                     $('.charisma').val("");
                     $("input[name='husCheck']:checked").attr({
                         checked: false
                     });
-                    $('.husText').val("");
+                    $('.performance').val("");
                     $("input[name='respiratory']:checked").attr({
                         checked: false
                     });
-                    $('.respiratoryText').val("");
+                    $('.perception').val("");
                     $('.fio2').val("");
                     $('.abdpb').val("");
                     $("input[name='murmur']:checked").attr({
@@ -973,7 +973,7 @@ $('#form-submit-button').on('click', function (event) {
                     });
                     $('.cardiacResults').val("");
                     $('.meds').val("");
-                    $('.maternalBloodType').val("");
+                    $('.history').val("");
                     $("input[name='cbc']:checked").attr({
                         checked: false
                     });
@@ -989,12 +989,12 @@ $('#form-submit-button').on('click', function (event) {
                     $("input[name='tg']:checked").attr({
                         checked: false
                     });
-                    $('.labsTestsText').val("");
+                    $('.persuasion').val("");
                     $('.qtuLabs').val("");
                     $("input[name='troughCheck']:checked").attr({
                         checked: false
                     });
-                    $('.troughText').val("");
+                    $('.medicine').val("");
                     $('.dateOfTrough').val("");
                     $('.timeOfTrough').val("");
                     $("input[name='cxrCheck']:checked").attr({
@@ -1010,7 +1010,7 @@ $('#form-submit-button').on('click', function (event) {
                     $('.newbornScreenDate').val("");
                     $('.cchdEchoText').val("");
                     $('.eyeExamDate').val("");
-                    $('.eyeExamText').val("");
+                    $('.religion').val("");
                     $('.fuDate').val("");
                     $("input[name='hearingCheck']:checked").attr({
                         checked: false
@@ -1039,15 +1039,15 @@ $('#form-submit-button').on('click', function (event) {
                     $("input[name='salineLockCheck']:checked").attr({
                         checked: false
                     });
-                    $('.drugInput').val("");
+                    $('.stealth').val("");
                     $('.ccDrug').val("");
                     $('.hrDrug').val("");
-                    $('.tDrugInput').val("");
+                    $('.sleightOfHand').val("");
                     $('.ccTDrug').val("");
                     $('.hrTDrug').val("");
                     $('.ccIl').val("");
                     $('.hrIl').val("");
-                    $('.drugNotes').val("");
+                    $('.nature').val("");
                     $('.feedingMethod').val("");
                     $("input[name='adLib']:checked").attr({
                         checked: false
@@ -1061,7 +1061,7 @@ $('#form-submit-button').on('click', function (event) {
                     $('.completedAttempts').val("");
                     $('.planOfCare').val("");
                     $('.socialConsiderations').val("");
-                    $('.historyChanges').val("");
+                    $('.survival').val("");
                     $('.referalls').val("");
                     $("input[name='synagis']:checked").attr({
                         checked: false
@@ -1116,30 +1116,30 @@ $('#form-submit-button').on('click', function (event) {
                     $('.birthWeight').val("");
                     $('.hitPoints').val("");
                     $('.dexterity').val("");
-                    $('.bloodType').val("");
+                    $('.insight').val("");
                     $('.constitution').val("");
                     $('.intelligence').val("");
                     $('.gp').val("");
-                    $('.dateOfAdmission').val("");
-                    $('.timeOfAdmission').val("");
-                    $('.dateOfDischarge').val("");
-                    $('.timeOfDischarge').val("");
+                    $('.acrobatics').val("");
+                    $('.animalHandling').val("");
+                    $('.arcana').val("");
+                    $('.athletics').val("");
                     $('.wisdom').val("");
                     $('.para').val("");
                     $('.age').val("");
-                    $('.vagCs').val("");
-                    $('.apgar1').val("");
-                    $('.apgar2').val("");
+                    $('.deception').val("");
+                    $('.intimidation').val("");
+                    $('.investigation').val("");
                     $('.rom').val("");
                     $('.charisma').val("");
                     $("input[name='husCheck']:checked").attr({
                         checked: false
                     });
-                    $('.husText').val("");
+                    $('.performance').val("");
                     $("input[name='respiratory']:checked").attr({
                         checked: false
                     });
-                    $('.respiratoryText').val("");
+                    $('.perception').val("");
                     $('.fio2').val("");
                     $('.abdpb').val("");
                     $("input[name='murmur']:checked").attr({
@@ -1150,7 +1150,7 @@ $('#form-submit-button').on('click', function (event) {
                     });
                     $('.cardiacResults').val("");
                     $('.meds').val("");
-                    $('.maternalBloodType').val("");
+                    $('.history').val("");
                     $("input[name='cbc']:checked").attr({
                         checked: false
                     });
@@ -1166,12 +1166,12 @@ $('#form-submit-button').on('click', function (event) {
                     $("input[name='tg']:checked").attr({
                         checked: false
                     });
-                    $('.labsTestsText').val("");
+                    $('.persuasion').val("");
                     $('.qtuLabs').val("");
                     $("input[name='troughCheck']:checked").attr({
                         checked: false
                     });
-                    $('.troughText').val("");
+                    $('.medicine').val("");
                     $('.dateOfTrough').val("");
                     $('.timeOfTrough').val("");
                     $("input[name='cxrCheck']:checked").attr({
@@ -1187,7 +1187,7 @@ $('#form-submit-button').on('click', function (event) {
                     $('.newbornScreenDate').val("");
                     $('.cchdEchoText').val("");
                     $('.eyeExamDate').val("");
-                    $('.eyeExamText').val("");
+                    $('.religion').val("");
                     $('.fuDate').val("");
                     $("input[name='hearingCheck']:checked").attr({
                         checked: false
@@ -1216,15 +1216,15 @@ $('#form-submit-button').on('click', function (event) {
                     $("input[name='salineLockCheck']:checked").attr({
                         checked: false
                     });
-                    $('.drugInput').val("");
+                    $('.stealth').val("");
                     $('.ccDrug').val("");
                     $('.hrDrug').val("");
-                    $('.tDrugInput').val("");
+                    $('.sleightOfHand').val("");
                     $('.ccTDrug').val("");
                     $('.hrTDrug').val("");
                     $('.ccIl').val("");
                     $('.hrIl').val("");
-                    $('.drugNotes').val("");
+                    $('.nature').val("");
                     $('.feedingMethod').val("");
                     $("input[name='adLib']:checked").attr({
                         checked: false
@@ -1238,7 +1238,7 @@ $('#form-submit-button').on('click', function (event) {
                     $('.completedAttempts').val("");
                     $('.planOfCare').val("");
                     $('.socialConsiderations').val("");
-                    $('.historyChanges').val("");
+                    $('.survival').val("");
                     $('.referalls').val("");
                     $("input[name='synagis']:checked").attr({
                         checked: false

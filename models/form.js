@@ -69,7 +69,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    bloodType: {
+    insight: {
         type: String,
         required: false,
         default: ""
@@ -89,22 +89,22 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    dateOfAdmission: {
+    acrobatics: {
         type: String,
         required: false,
         default: ""
     },
-    timeOfAdmission: {
+    animalHandling: {
         type: String,
         required: false,
         default: ""
     },
-    dateOfDischarge: {
+    arcana: {
         type: String,
         required: false,
         default: ""
     },
-    timeOfDischarge: {
+    athletics: {
         type: String,
         required: false,
         default: ""
@@ -124,17 +124,17 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    vagCs: {
+    deception: {
         type: String,
         required: false,
         default: ""
     },
-    apgar1: {
+    intimidation: {
         type: String,
         required: false,
         default: ""
     },
-    apgar2: {
+    investigation: {
         type: String,
         required: false,
         default: ""
@@ -149,7 +149,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    maternalBloodType: {
+    history: {
         type: String,
         required: false,
         default: ""
@@ -159,7 +159,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    husText: {
+    performance: {
         type: String,
         required: false,
         default: ""
@@ -170,7 +170,7 @@ const formSchema = new mongoose.Schema({
         default: ""
     },
 
-    respiratoryText: {
+    perception: {
         type: String,
         required: false,
         default: ""
@@ -235,7 +235,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    labsTestsText: {
+    persuasion: {
         type: String,
         required: false,
         default: ""
@@ -250,7 +250,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    troughText: {
+    medicine: {
         type: String,
         required: false,
         default: ""
@@ -310,7 +310,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    eyeExamText: {
+    religion: {
         type: String,
         required: false,
         default: ""
@@ -365,7 +365,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    drugInput: {
+    stealth: {
         type: String,
         required: false,
         default: ""
@@ -380,7 +380,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    tDrugInput: {
+    sleightOfHand: {
         type: String,
         required: false,
         default: ""
@@ -405,7 +405,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    drugNotes: {
+    nature: {
         type: String,
         required: false,
         default: ""
@@ -456,7 +456,7 @@ const formSchema = new mongoose.Schema({
         required: false,
         default: ""
     },
-    historyChanges: {
+    survival: {
         type: String,
         required: false,
         default: ""
