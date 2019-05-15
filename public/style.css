@@ -70,6 +70,7 @@ input[type='radio'] {
     z-index: 1;
 }
 
+
 /* -------------------------------------
 Header styles
 */
@@ -351,12 +352,25 @@ p {
 #absoluteCenteredDiv {}
 
 .full-form {
-    border: black;
+    border: red;
 }
 
-/* -------------------------------------
-Footer styles
-*/
+
+
+-------------------------------------
+/*Footer styles*/
+
+.footer-wrapper {
+    display: inline-block !important;
+}
+
+.footer-icon {
+    text-decoration: none;
+}
+
+i {
+    padding: 10px;
+}
 
 .hidden {
     display: none !important;
