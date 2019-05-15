@@ -384,6 +384,7 @@ $('#login').on('click', function (event) {
     $('#full-form').removeClass('hidden');
     $('#login-form-section').addClass('hidden');
     $('#landing-page-info').addClass('hidden');
+    $('.details').addClass('hidden');
     //    const loginUsername = $('.loginUsername').val();
     //    const loginPassword = $('.loginPassword').val();
     //    // check for spaces, undefined
@@ -425,6 +426,7 @@ $('#register').on('click', function (event) {
     $('#full-form').removeClass('hidden');
     $('#sign-up-form').addClass('hidden');
     $('#landing-page-info').addClass('hidden');
+    $('.details').addClass('hidden');
     //    const username = $('.registerUsername').val();
     //    const password = $('.registerPassword').val();
     //    const email = $('.registerEmail').val();
