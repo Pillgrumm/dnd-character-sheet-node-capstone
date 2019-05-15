@@ -16,6 +16,7 @@
     -webkit-padding-after: 0px;
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
+    color: aliceblue;
 }
 
 /* -------------------------------------
@@ -24,10 +25,15 @@ General styles */
 body {
     font-family: 'Macondo Swash Caps', cursive;
     font-size: 16px;
-    background: url('./images/landing-background.jpg') no-repeat;
-    background-attachment: fixed;
     position: relative;
     background-size: cover;
+}
+
+main,
+section,
+header {
+    border: 1px solid red;
+
 }
 
 .greyText::placeholder {
@@ -35,9 +41,6 @@ body {
 }
 
 
-.hidden {
-    display: none;
-}
 
 h1 {
     margin: 5px;
@@ -71,6 +74,41 @@ input[type='radio'] {
 /* -------------------------------------
 Header styles
 */
+.hero-image {
+    width: 100%;
+    margin: 0;
+    display: block;
+    background: url('./images/hero-image.jpg') no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    text-align: center;
+}
+
+#landing-page-info {
+    padding: 10px;
+    width: 35%;
+    margin-left: 10%;
+    margin-right: 4%;
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('./images/transparent.jpg') no-repeat;
+    background-size: cover;
+}
+
+#login-form-section,
+#sign-up-form {
+    padding: 10px;
+    width: 35%;
+    margin-left: 4%;
+    margin-right: 10%;
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(./images/transparent.jpg) no-repeat;
+    background-size: cover;
+}
 
 .title {
     margin-top: 10px;
@@ -78,14 +116,58 @@ Header styles
     font-size: 20px;
 }
 
-#landing-page-info {
+.details {
+    width: 100%;
+    margin: 0;
+    display: block;
+    background: url('./images/landing-background.jpg') no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    text-align: center;
+}
 
-    padding-left: 90px;
-    padding-right: 90px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    border
+#build {
+    padding: 10px;
+    width: 33.33%;
+    /*
+    margin-left: 10%;
+    margin-right: 4%;
+*/
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('./images/transparent.jpg') no-repeat;
+    background-size: cover;
+}
+
+#store {
+    padding: 10px;
+    width: 33.33%;
+    /*
+    margin-left: 4%;
+    margin-right: 10%;
+*/
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(./images/transparent.jpg) no-repeat;
+    background-size: cover;
+}
+
+#rollDice {
+    padding: 10px;
+    margin: 10px;
+    width: 33.33%;
+    /*
+    margin-left: 4%;
+    margin-right: 10%;
+*/
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(./images/transparent.jpg) no-repeat;
+    background-size: cover;
 }
 
 /* -------------------------------------
@@ -244,7 +326,7 @@ Content styles
 .authentication-box {
     background-color: rgb(202, 179, 160);
     width: 300px;
-    border-radius: 6px;
+    border-radius: 40%;
     margin: 2rem auto;
     padding: 0px 0px 70px 0px;
     border: 1px solid black;
@@ -305,17 +387,7 @@ p {
     color: white;
 }
 
-#absoluteCenteredDiv {
-
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 400px;
-    height: 300px;
-    text-align: center;
-}
+#absoluteCenteredDiv {}
 
 .full-form {
     border: black;
@@ -325,6 +397,9 @@ p {
 Footer styles
 */
 
+.hidden {
+    display: none !important;
+}
 
 /* -------------------------------------
 Responsive styles

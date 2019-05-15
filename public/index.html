@@ -13,49 +13,81 @@
 <body>
     <input type="hidden" class="logged-in-user" value="">
     <input type="hidden" class="selected-entry-id" value="">
-    <header role="banner">
-        <h1 class="title">Role Lodge</h1>
-    </header>
-    <section role="region" id="landing-page-info">
-        <div class="app-summary">
-            <h1>Role Lodge is a place for Dungeons and Dragons characters statistics to be stored for easy viewing. Additionally, if the player has misplaced their dice, there is a functionality at the bottom that uses a random number generator for each type of dice!</h1>
-            <h4>In order to get started either login or register an account to use this application.</h4>
-        </div>
-    </section>
-    <section role="region" id="login-form-section">
-        <div id="absoluteCenteredDiv">
-            <form class="login-form">
-                <div class="authentication-box">
-                    <h1>Login</h1>
-                    <input class="loginUsername greyText" name="username" type="text" placeholder="User Name" value="test" required>
-                    <input class="loginPassword greyText" name="password" type="password" placeholder="Password" value="123" required>
-                    <p>Username: test</p>
-                    <p>Password: 123</p>
-                    <button class="button" id="login">Login</button>
-                </div>
-            </form>
-            <div class="loginRegister">
-                <p>Don't have an account? <a id="sign-up-link" href="#">Register here.</a></p>
-            </div>
-        </div>
-    </section>
+    <main class="hero-image">
 
-    <section role="region" id="sign-up-form" class="hidden">
-        <div id="absoluteCenteredDiv">
-            <form class="sign-up-form">
-                <div class="authentication-box">
-                    <h1>Sign Up</h1>
-                    <input class="registerUsername greyText" name="username" type="text" placeholder="User Name" required>
-                    <input class="registerPassword greyText" name="password" type="password" placeholder="Password" required>
-                    <input class="registerEmail greyText" name="email" type="email" placeholder="Email" required>
-                    <button class="button" id="register">Register</button>
-                </div>
-            </form>
-            <div class="loginRegister">
-                <p>Already have an account? <a id="sign-in-link" href="#">Click here.</a></p>
+        <section role="region" id="landing-page-info">
+            <header role="banner">
+                <h1 class="title">Role Lodge</h1>
+            </header>
+            <div class="app-summary">
+                <h1>Role Lodge is a place for Dungeons and Dragons characters statistics to be stored for easy viewing. Additionally, if the player has misplaced their dice, there is a functionality at the bottom that uses a random number generator for each type of dice!</h1>
+                <h4>In order to get started either login or register an account to use this application.</h4>
             </div>
-        </div>
-    </section>
+        </section>
+        <section role="region" id="login-form-section">
+            <div id="absoluteCenteredDiv">
+                <form class="login-form">
+                    <div class="authentication-box">
+                        <h1>Login</h1>
+                        <input class="loginUsername greyText" name="username" type="text" placeholder="User Name" value="test" required>
+                        <input class="loginPassword greyText" name="password" type="password" placeholder="Password" value="123" required>
+                        <p>Username: test</p>
+                        <p>Password: 123</p>
+                        <button class="button" id="login">Login</button>
+                    </div>
+                </form>
+                <div class="loginRegister">
+                    <p>Don't have an account? <a id="sign-up-link" href="#">Register here.</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section role="region" id="sign-up-form" class="hidden">
+            <div id="absoluteCenteredDiv">
+                <form class="sign-up-form">
+                    <div class="authentication-box">
+                        <h1>Sign Up</h1>
+                        <input class="registerUsername greyText" name="username" type="text" placeholder="User Name" required>
+                        <input class="registerPassword greyText" name="password" type="password" placeholder="Password" required>
+                        <input class="registerEmail greyText" name="email" type="email" placeholder="Email" required>
+                        <button class="button" id="register">Register</button>
+                    </div>
+                </form>
+                <div class="loginRegister">
+                    <p>Already have an account? <a id="sign-in-link" href="#">Click here.</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <main class="details">
+        <section role="region" id="build">
+            <header role="banner">
+                <h1 class="title">Create</h1>
+            </header>
+            <div class="app-summary">
+                <h1>Create your character.</h1>
+                <h4>Customize your character's statistics exactly how you need in order to explore dungeons.</h4>
+            </div>
+        </section>
+        <section role="region" id="store">
+            <header role="banner">
+                <h1 class="title">Store</h1>
+            </header>
+            <div class="app-summary">
+                <h1>Store your creation.</h1>
+                <h4>Save your characters progress for easy viewing for your next session.</h4>
+            </div>
+        </section>
+        <section role="region" id="rollDice">
+            <header role="banner">
+                <h1 class="title">Roll</h1>
+            </header>
+            <div class="app-summary">
+                <h1>Roll the dice</h1>
+                <h4>Did you forget or need to roll for a stealth check? Role Lodge the dice necessary for your journey.</h4>
+            </div>
+        </section>
+    </main>
     <main role="main" id="full-form" class="hidden">
         <section role="region" class="form-wrapper">
             <fieldset>
