@@ -1301,6 +1301,32 @@ $("#d20").on("click", function () {
 });
 
 
+//d12 dice
+var d12 = {
+    dice: roll = {
+        value: 0,
+    }
+}
+
+$("#d12").on("click", function () {
+    d12.dice.value = 1 + Math.floor(Math.random() * 12);
+    $("#d12-value").empty();
+    $("#d12-value").append("You rolled: " + d12.dice.value + " ");
+});
+
+//d10 dice
+var d10 = {
+    dice: roll = {
+        value: 0,
+    }
+}
+
+$("#d10").on("click", function () {
+    d10.dice.value = 1 + Math.floor(Math.random() * 10);
+    $("#d10-value").empty();
+    $("#d10-value").append("You rolled: " + d10.dice.value + " ");
+});
+
 //form trigger
 $(document).submit('form', function (event) {
     event.preventDefault();
