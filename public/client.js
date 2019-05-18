@@ -1327,6 +1327,45 @@ $("#d10").on("click", function () {
     $("#d10-value").append("You rolled: " + d10.dice.value + " ");
 });
 
+//d8 dice
+var d8 = {
+    dice: roll = {
+        value: 0,
+    }
+}
+
+$("#d8").on("click", function () {
+    d8.dice.value = 1 + Math.floor(Math.random() * 8);
+    $("#d8-value").empty();
+    $("#d8-value").append("You rolled: " + d8.dice.value + " ");
+});
+
+// d6 dice
+var d6 = {
+    dice: roll = {
+        value: 0,
+    }
+}
+
+$("#d6").on("click", function () {
+    d6.dice.value = 1 + Math.floor(Math.random() * 6);
+    $("#d6-value").empty();
+    $("#d6-value").append("You rolled: " + d6.dice.value + " ");
+});
+
+// d4 dice
+var d4 = {
+    dice: roll = {
+        value: 0,
+    }
+}
+
+$("#d4").on("click", function () {
+    d4.dice.value = 1 + Math.floor(Math.random() * 4);
+    $("#d4-value").empty();
+    $("#d4-value").append("You rolled: " + d4.dice.value + " ");
+});
+
 //form trigger
 $(document).submit('form', function (event) {
     event.preventDefault();
