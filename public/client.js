@@ -163,7 +163,7 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
 $(document).ready(function () {
     //do stuff
     $(".icon-content").hide();
-    $(".section-content").hide();
+//    $(".section-content").hide();
     $(".legend-show").show();
     $(".legend-hide").hide();
     $("#form-delete-button").hide();

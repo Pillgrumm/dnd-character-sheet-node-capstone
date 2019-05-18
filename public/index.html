@@ -116,8 +116,11 @@
         <form class="character-information-form">
             <section role="region" class="form-wrapper">
                 <fieldset>
+                    <!--
                     <legend class="legend-show"><button>+</button> General </legend>
                     <legend class="legend-hide"><button>-</button> General </legend>
+-->
+                    <legend>General</legend>
                     <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="characterName">Character Name</label>
@@ -225,8 +228,11 @@
             </section>
             <section role="region" class="form-wrapper">
                 <fieldset>
+                    <!--
                     <legend class="legend-show"><button>+</button> Statistics </legend>
                     <legend class="legend-hide"><button>-</button> Statistics </legend>
+-->
+                    <legend>Statistics</legend>
                     <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="strength">STR</label>
@@ -293,8 +299,11 @@
             </section>
             <section role="region" class="form-wrapper">
                 <fieldset>
+                    <!--
                     <legend class="legend-show"><button>+</button> Skills </legend>
                     <legend class="legend-hide"><button>-</button> Skills </legend>
+-->
+                    <legend>Skills</legend>
                     <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="acrobatics">Acrobatics (Dex)</label>
@@ -479,13 +488,14 @@
                     </section>
                 </fieldset>
             </section>
-            <section role="region" class="form-wrapper">
+            <section role="region" class="dice-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Dice </legend>
                     <legend class="legend-hide"><button>-</button> Dice </legend>
                     <section role="region" class="section-content">
                         <div class="input-wrapper">
-                            <label for="d20">D20:</label>
+
+                            <img class="dice-icon" src="images/d20.png" alt="d20">
                             <input class="d20" name="d20" type="number" placeholder="0" value="14" min="1" max="20">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">

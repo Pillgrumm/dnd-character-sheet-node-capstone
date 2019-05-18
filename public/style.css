@@ -71,6 +71,10 @@ input[type='radio'] {
 }
 
 
+.dice-icon {
+    padding-top: 10px;
+}
+
 /* -------------------------------------
 Header styles
 */
@@ -141,7 +145,6 @@ Content styles
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    color: black !important;
     margin: 2rem auto;
 }
 
@@ -154,9 +157,10 @@ Content styles
 }
 
 .form-wrapper {
-    display: block;
+    display: table-cell;
     width: 33.33%;
     margin: 2rem auto;
+    overflow-y: scroll;
 }
 
 .form-wrapper .input-wrapper {
@@ -170,7 +174,9 @@ Content styles
     border: 1px solid black;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: beige;
+    background: url(./images/transparent.jpg) no-repeat;
+    background-size: cover;
+    max-height: 500px;
 }
 
 .form-wrapper fieldset label,
@@ -351,8 +357,13 @@ p {
 
 #absoluteCenteredDiv {}
 
-.full-form {
+#full-form {
     border: red;
+    background: url('./images/fighting-image-background.jpg') no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    text-align: center;
 }
 
 
