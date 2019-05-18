@@ -148,6 +148,14 @@ Content styles
     margin: 2rem auto;
 }
 
+.name-legend {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 2rem auto;
+    font-size: 25px;
+}
+
 .app-summary {
     display: block;
     text-align: center;
@@ -160,7 +168,8 @@ Content styles
     display: table-cell;
     width: 33.33%;
     margin: 2rem auto;
-    overflow-y: scroll;
+    float: left;
+    /*    overflow-y: scroll;*/
 }
 
 .form-wrapper .input-wrapper {
@@ -177,6 +186,7 @@ Content styles
     background: url(./images/transparent.jpg) no-repeat;
     background-size: cover;
     max-height: 500px;
+    overflow-y: scroll;
 }
 
 .form-wrapper fieldset label,
