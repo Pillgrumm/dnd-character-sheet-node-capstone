@@ -163,7 +163,7 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
 $(document).ready(function () {
     //do stuff
     $(".icon-content").hide();
-//    $(".section-content").hide();
+    //    $(".section-content").hide();
     $(".legend-show").show();
     $(".legend-hide").hide();
     $("#form-delete-button").hide();
@@ -1286,6 +1286,20 @@ $('#sign-in-link').on('click', function (event) {
     $('#sign-up-form').addClass('hidden');
     $('#login-form-section').removeClass('hidden');
 });
+
+//d20 dice
+var d20 = {
+    dice: roll = {
+        value: 0,
+    }
+}
+
+$("#d20").on("click", function () {
+    d20.dice.value = 1 + Math.floor(Math.random() * 20);
+    $("#d20-value").empty();
+    $("#d20-value").append("You rolled: " + d20.dice.value + " ");
+});
+
 
 //form trigger
 $(document).submit('form', function (event) {

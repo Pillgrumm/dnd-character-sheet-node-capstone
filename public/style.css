@@ -186,7 +186,7 @@ Content styles
     background: url(./images/transparent.jpg) no-repeat;
     background-size: cover;
     max-height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .form-wrapper fieldset label,
@@ -213,7 +213,15 @@ Content styles
     margin-top: 1rem;
 }
 
-
+.dice-wrapper {
+    padding: 10px;
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 4%;
+    border: solid 1px red;
+}
 
 
 
@@ -351,6 +359,10 @@ p {
     display: block;
     font-weight: 800;
     font-size: 0.8em;
+}
+
+.dice-value {
+    display: inline-block;
 }
 
 .loginRegister {
