@@ -28,7 +28,6 @@ body {
     background-color: black;
 }
 
-main,
 section,
 header {
     border: 1px solid red;
@@ -223,6 +222,15 @@ Content styles
     border: solid 1px red;
 }
 
+.character-wrapper {
+    padding: 10px;
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 4%;
+    margin-right: 10%;
+    border: solid 1px red;
+}
 
 
 .radioCheck {
@@ -363,6 +371,18 @@ p {
 
 .dice-value {
     display: inline-block;
+    vertical-align: middle;
+}
+
+.dice-button {
+    background-color: transparent;
+    vertical-align: middle;
+
+}
+
+.dice-image {
+    width: 5p%;
+    max-width: 50px;
 }
 
 .loginRegister {
@@ -375,6 +395,13 @@ p {
 .select-previous-entries-button:hover {
     background: #2CC06B;
     color: white;
+}
+
+.bottom-content > div {
+    width: 49%;
+    display: inline-block;
+    border: solid 1px pink;
+
 }
 
 #absoluteCenteredDiv {}
