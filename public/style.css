@@ -74,6 +74,13 @@ input[type='radio'] {
     padding-top: 10px;
 }
 
+.page-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* -------------------------------------
 Header styles
 */
@@ -125,11 +132,11 @@ Header styles
 #store,
 #rollDice {
     padding: 10px;
-    width: 33.33%;
+    width: 31%;
     max-width: 400px;
     display: inline-block;
-    vertical-align: middle;
-    background: url('./images/transparent.jpg') no-repeat;
+    vertical-align: top;
+    background: url(./images/transparent.jpg) no-repeat;
     background-size: cover;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -212,26 +219,16 @@ Content styles
     margin-top: 1rem;
 }
 
-.dice-wrapper {
-    padding: 10px;
-    width: 35%;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    margin-right: 4%;
-    border: solid 1px red;
-}
-
+.dice-wrapper,
 .character-wrapper {
     padding: 10px;
-    width: 35%;
+    width: 93%;
     margin-top: 5%;
     margin-bottom: 10%;
-    margin-left: 4%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
     border: solid 1px red;
 }
-
 
 .radioCheck {
     display: block;
@@ -318,12 +315,8 @@ Content styles
 
 
 .authentication-box {
-    background-color: rgb(202, 179, 160);
-    width: 300px;
-    border-radius: 40%;
     margin: 2rem auto;
     padding: 0px 0px 70px 0px;
-    border: 1px solid black;
     display: block;
     margin-bottom: 10px;
 }
@@ -342,7 +335,9 @@ p {
     border: #ccc 1px solid;
     border-bottom: #ccc 2px solid;
     padding: 8px;
-    width: 250px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     font-size: 1em;
     border-radius: 4px;
@@ -401,6 +396,7 @@ p {
     width: 49%;
     display: inline-block;
     border: solid 1px pink;
+    vertical-align: top;
 
 }
 
@@ -415,7 +411,12 @@ p {
     text-align: center;
 }
 
-
+.create-styling,
+.store-styling,
+.roll-styling {
+    display: block;
+    height: 70px;
+}
 
 -------------------------------------
 /*Footer styles*/
@@ -449,4 +450,68 @@ input[type="date"] {
 
     /* Solution 2 */
     /* min-width: 96%; */
+}
+
+/*ipad lanscape / small laptop*/
+
+@media only screen and (max-width: 1024px) {
+    body {
+        color: blue;
+    }
+}
+
+
+/*ipad potrait*/
+
+@media only screen and (max-width: 768px) {
+    body {
+        color: red;
+    }
+
+    .form-wrapper {
+        display: block;
+        width: 100%;
+        float: none;
+    }
+
+    .bottom-content > div {
+        width: 100%;
+        display: block;
+    }
+
+    #build,
+    #store,
+    #rollDice {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #login-form-section,
+    #sign-up-form,
+    #landing-page-info {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+
+/*iPhone landscape*/
+
+@media only screen and (max-width: 480px) {
+    body {
+        color: green;
+    }
+}
+
+
+/*iPhone portrait*/
+
+@media only screen and (max-width: 320px) {
+    body {
+        color: purple;
+    }
 }
