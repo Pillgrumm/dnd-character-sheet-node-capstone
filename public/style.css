@@ -371,6 +371,31 @@ p {
     display: block;
     font-weight: 800;
     font-size: 0.8em;
+    font-family: inherit;
+}
+
+button:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+}
+
+#form-submit-button,
+#form-delete-button {
+    height: 47px;
+    width: 200px;
+
+}
+
+#form-submit-button {
+    float: left;
+}
+
+#form-delete-button {
+    float: right;
 }
 
 .dice-value {
@@ -397,7 +422,7 @@ p {
 .button:hover,
 .submit-button:hover,
 .select-previous-entries-button:hover {
-    background: #2CC06B;
+
     color: white;
 }
 
