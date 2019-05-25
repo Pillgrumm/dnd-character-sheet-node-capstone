@@ -35,7 +35,7 @@ header {
 }
 
 .greyText::placeholder {
-    color: grey !important;
+    color: black !important;
 }
 
 
@@ -183,7 +183,7 @@ Content styles
     border-bottom: 1px solid gray;
     margin-top: 1rem;
     font-size: 1.1rem;
-    color: grey
+    color: black;
 }
 
 .form-wrapper fieldset,
@@ -205,7 +205,7 @@ Content styles
     width: 30%;
     padding: 0.5rem;
     font-size: 1.1rem;
-    color: grey
+    color: grey;
 }
 
 .form-wrapper fieldset input,
