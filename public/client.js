@@ -1366,7 +1366,7 @@ $("#d4").on("click", function () {
     $("#d4-value").append("You rolled: " + d4.dice.value + " ");
 });
 
-let htmlImageOutput = "<img src='dice-" + diceNumber + ".png' class='dice-image'>";
+let htmlImageOutput = "<img src='images/dice/dice-" + diceNumber + ".png' class='dice-image'>";
 
 //form trigger
 $(document).submit('form', function (event) {
