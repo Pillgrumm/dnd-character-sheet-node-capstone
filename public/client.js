@@ -11,16 +11,16 @@ function getPreviousEntries(userId) {
             console.log(result);
             let htmlOutput = "";
             for (let i = 0; i < result.entries.length; i++) {
-                htmlOutput += '<div class="input-wrapper character-name">';
-                htmlOutput += '<label for="character-name">';
+                htmlOutput += '<form class="input-wrapper character-name">';
+                htmlOutput += '<input type="hidden" class="character-name-value" value="' + result.entries[i]._id + '">';
+                htmlOutput += '<button type="button" class="character-name-button">';
                 htmlOutput += result.entries[i].characterName;
                 htmlOutput += ', Level ';
                 htmlOutput += result.entries[i].characterLevel
                 htmlOutput += ' ';
                 htmlOutput += result.entries[i].characterClass;
-                htmlOutput += '</label>';
-                htmlOutput += '</div>';
-
+                htmlOutput += '</button>';
+                htmlOutput += '</form>';
             }
             $(".character-content").html(htmlOutput);
         })
@@ -205,175 +205,53 @@ $(document).on('click', '.legend-show', function (event) {
     $(this).parent().find(".legend-hide").show();
     $(this).parent().parent().find(".section-content").show();
 });
-
-$(document).on('change', '.previous-entries-dropdown', function (event) {
-    event.preventDefault();
-    let selectedEntryID = $(".previous-entries-dropdown").val();
-    $(".selected-entry-id").val(selectedEntryID);
-    if (selectedEntryID != "") {
-        prePopulateFormBasedOnEntryID(selectedEntryID);
-        $("#form-delete-button").show();
-
-    } else {
-        $("#form-delete-button").hide();
-        $('.selected-entry-id').val("");
-        $('.characterName').val("");
-        $('.characterClass').val("");
-        $('.characterLevel').val("");
-        $('.characterRace').val("");
-        $('.alignment').val("");
-        $('.background').val("");
-        $('.experience').val("");
-        $('.strength').val("");
-        //        $('.timeOfBirth').val("");
-        //        $('.birthWeight').val("");
-        $('.hitPoints').val("");
-        $('.dexterity').val("");
-        $('.insight').val("");
-        $('.constitution').val("");
-        $('.intelligence').val("");
-        $('.gp').val("");
-        $('.acrobatics').val("");
-        $('.animalHandling').val("");
-        $('.arcana').val("");
-        $('.athletics').val("");
-        $('.wisdom').val("");
-        //        $('.para').val("");
-        //        $('.age').val("");
-        $('.deception').val("");
-        $('.intimidation').val("");
-        $('.investigation').val("");
-        //        $('.rom').val("");
-        $('.charisma').val("");
-        //        $("input[name='husCheck']:checked").attr({
-        //            checked: false
-        //        });
-        $('.performance').val("");
-        //        $("input[name='respiratory']:checked").attr({
-        //            checked: false
-        //        });
-        $('.perception').val("");
-        //        $('.fio2').val("");
-        //        $('.abdpb').val("");
-        //        $("input[name='murmur']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='echo']:checked").attr({
-        //            checked: false
-        //        });
-        //        $('.cardiacResults').val("");
-        //        $('.meds').val("");
-        $('.history').val("");
-        //        $("input[name='cbc']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='tb']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='bmp']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='crp']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='tg']:checked").attr({
-        //            checked: false
-        //        });
-        $('.persuasion').val("");
-        //        $('.qtuLabs').val("");
-        //        $("input[name='troughCheck']:checked").attr({
-        //            checked: false
-        //        });
-        $('.medicine').val("");
-        //        $('.dateOfTrough').val("");
-        //        $('.timeOfTrough').val("");
-        //        $("input[name='cxrCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $('.cxrDate').val("");
-        //        $("input[name='kubCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $('.kubDate').val("");
-        //        $('.radiologyText').val("");
-        //        $('.hepBDate').val("");
-        //        $('.newbornScreenDate').val("");
-        //        $('.cchdEchoText').val("");
-        //        $('.eyeExamDate').val("");
-        $('.religion').val("");
-        //        $('.fuDate').val("");
-        //        $("input[name='hearingCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='carSeatCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='cprCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='circCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='pivCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='piccCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='uacCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='uvcCheck']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='salineLockCheck']:checked").attr({
-        //            checked: false
-        //        });
-        $('.stealth').val("");
-        //        $('.ccDrug').val("");
-        //        $('.hrDrug').val("");
-        $('.sleightOfHand').val("");
-        //        $('.ccTDrug').val("");
-        //        $('.hrTDrug').val("");
-        //        $('.ccIl').val("");
-        //        $('.hrIl').val("");
-        $('.nature').val("");
-        //        $('.feedingMethod').val("");
-        //        $("input[name='adLib']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='cueBased']:checked").attr({
-        //            checked: false
-        //        });
-        //        $('.fiCC').val("");
-        //        $('.hrCC').val("");
-        //        $('.feedingAttempts').val("");
-        //        $('.completedAttempts').val("");
-        //        $('.planOfCare').val("");
-        //        $('.socialConsiderations').val("");
-        $('.survival').val("");
-        //        $('.referalls').val("");
-        //        $("input[name='synagis']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='vaccine']:checked").attr({
-        //            checked: false
-        //        });
-        //        $('.pediatrician').val("");
-        //        $('.lastBath').val("");
-        //        $("input[name='consent']:checked").attr({
-        //            checked: false
-        //        });
-        //        $("input[name='husCP']:checked").attr({
-        //            checked: false
-        //        });
-        //        $('.cpDate').val("");
-        //        $('.cpTime').val("");
-        //        $('.phototherapyStartDate').val("");
-        //        $('.phototherapyEndDate').val("");
-        //        $('.phototherapySelect').val("");
-    }
-});
+//
+//$(document).on('change', '.previous-entries-dropdown', function (event) {
+//    event.preventDefault();
+//    let selectedEntryID = $(".previous-entries-dropdown").val();
+//    $(".selected-entry-id").val(selectedEntryID);
+//    if (selectedEntryID != "") {
+//        prePopulateFormBasedOnEntryID(selectedEntryID);
+//        $("#form-delete-button").show();
+//
+//    } else {
+//        $("#form-delete-button").hide();
+//        $('.selected-entry-id').val("");
+//        $('.characterName').val("");
+//        $('.characterClass').val("");
+//        $('.characterLevel').val("");
+//        $('.characterRace').val("");
+//        $('.alignment').val("");
+//        $('.background').val("");
+//        $('.experience').val("");
+//        $('.strength').val("");
+//        $('.hitPoints').val("");
+//        $('.dexterity').val("");
+//        $('.insight').val("");
+//        $('.constitution').val("");
+//        $('.intelligence').val("");
+//        $('.gp').val("");
+//        $('.acrobatics').val("");
+//        $('.animalHandling').val("");
+//        $('.arcana').val("");
+//        $('.athletics').val("");
+//        $('.wisdom').val("");
+//        $('.deception').val("");
+//        $('.intimidation').val("");
+//        $('.investigation').val("");
+//        $('.charisma').val("");
+//        $('.performance').val("");
+//        $('.perception').val("");
+//        $('.history').val("");
+//        $('.persuasion').val("");
+//        $('.medicine').val("");
+//        $('.religion').val("");
+//        $('.stealth').val("");
+//        $('.sleightOfHand').val("");
+//        $('.nature').val("");
+//        $('.survival').val("");
+//    }
+//});
 
 $(document).on('click', '.legend-hide', function (event) {
     event.preventDefault();
@@ -478,6 +356,67 @@ $('#register').on('click', function (event) {
     };
 });
 
+///////////////////////////////////////////////
+$(document).on('click', '.character-name-button', function (event) {
+    event.preventDefault();
+    const characterNameValue = $(this).parent().find('.character-name-value').val();
+
+    $.ajax({
+            type: 'GET',
+            url: '/get-entry-by-id/' + characterNameValue,
+            dataType: 'json',
+            contentType: 'application/json'
+        })
+        .done(function (result) {
+            console.log(result.entries[0]);
+            $("#form-delete-button").show();
+            $('.name-legend').text(result.entries[0].characterName);
+
+            $('.selected-entry-id').val(result.entries[0]._id);
+            $('.characterName').val(result.entries[0].characterName);
+
+            $('.characterClass').val(result.entries[0].characterClass);
+            $('.characterLevel').val(result.entries[0].characterLevel);
+            $('.characterRace').val(result.entries[0].characterRace);
+            $('.alignment').val(result.entries[0].alignment);
+            $('.background').val(result.entries[0].background);
+            $('.experience').val(result.entries[0].experience);
+            $('.strength').val(result.entries[0].strength);
+            $('.hitPoints').val(result.entries[0].hitPoints);
+            $('.dexterity').val(result.entries[0].dexterity);
+            $('.insight').val(result.entries[0].insight);
+            $('.constitution').val(result.entries[0].constitution);
+            $('.intelligence').val(result.entries[0].intelligence);
+            $('.gp').val(result.entries[0].gp);
+            $('.acrobatics').val(result.entries[0].acrobatics);
+            $('.animalHandling').val(result.entries[0].animalHandling);
+            $('.arcana').val(result.entries[0].arcana);
+            $('.athletics').val(result.entries[0].athletics);
+            $('.wisdom').val(result.entries[0].wisdom);
+            $('.deception').val(result.entries[0].deception);
+            $('.intimidation').val(result.entries[0].intimidation);
+            $('.investigation').val(result.entries[0].investigation);
+            $('.charisma').val(result.entries[0].charisma);
+            $('.performance').val(result.entries[0].performance);
+            $('.perception').val(result.entries[0].perception);
+            $('.history').val(result.entries[0].history);
+            $('.persuasion').val(result.entries[0].persuasion);
+            $('.medicine').val(result.entries[0].medicine);
+            $('.religion').val(result.entries[0].religion);
+            $('.stealth').val(result.entries[0].stealth);
+            $('.sleightOfHand').val(result.entries[0].sleightOfHand);
+            $('.nature').val(result.entries[0].nature);
+            $('.survival').val(result.entries[0].survival);
+        })
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
+});
+
+////////////////////////////////////////////////
+
 $('#form-delete-button').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
@@ -491,6 +430,7 @@ $('#form-delete-button').on('click', function (event) {
         //if call is succefull
         .done(function (result) {
             alert("Entry Deleted!");
+            $('.name-legend').text("Create a character");
             getPreviousEntries(loggedInUser);
             $('.selected-entry-id').val("");
             $("#form-delete-button").hide();
