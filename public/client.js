@@ -889,8 +889,6 @@ $('#form-submit-button').on('click', function (event) {
                     $('.background').val("");
                     $('.experience').val("");
                     $('.strength').val("");
-                    //                    $('.timeOfBirth').val("");
-                    //                    $('.birthWeight').val("");
                     $('.hitPoints').val("");
                     $('.dexterity').val("");
                     $('.insight').val("");
@@ -902,140 +900,20 @@ $('#form-submit-button').on('click', function (event) {
                     $('.arcana').val("");
                     $('.athletics').val("");
                     $('.wisdom').val("");
-                    //                    $('.para').val("");
-                    //                    $('.age').val("");
                     $('.deception').val("");
                     $('.intimidation').val("");
                     $('.investigation').val("");
-                    //                    $('.rom').val("");
                     $('.charisma').val("");
-                    //                    $("input[name='husCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
                     $('.performance').val("");
-                    //                    $("input[name='respiratory']:checked").attr({
-                    //                        checked: false
-                    //                    });
                     $('.perception').val("");
-                    //                    $('.fio2').val("");
-                    //                    $('.abdpb').val("");
-                    //                    $("input[name='murmur']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='echo']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $('.cardiacResults').val("");
-                    //                    $('.meds').val("");
                     $('.history').val("");
-                    //                    $("input[name='cbc']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='tb']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='bmp']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='crp']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='tg']:checked").attr({
-                    //                        checked: false
-                    //                    });
                     $('.persuasion').val("");
-                    //                    $('.qtuLabs').val("");
-                    //                    $("input[name='troughCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
                     $('.medicine').val("");
-                    //                    $('.dateOfTrough').val("");
-                    //                    $('.timeOfTrough').val("");
-                    //                    $("input[name='cxrCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $('.cxrDate').val("");
-                    //                    $("input[name='kubCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $('.kubDate').val("");
-                    //                    $('.radiologyText').val("");
-                    //                    $('.hepBDate').val("");
-                    //                    $('.newbornScreenDate').val("");
-                    //                    $('.cchdEchoText').val("");
-                    //                    $('.eyeExamDate').val("");
                     $('.religion').val("");
-                    //                    $('.fuDate').val("");
-                    //                    $("input[name='hearingCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='carSeatCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='cprCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='circCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='pivCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='piccCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='uacCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='uvcCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='salineLockCheck']:checked").attr({
-                    //                        checked: false
-                    //                    });
                     $('.stealth').val("");
-                    //                    $('.ccDrug').val("");
-                    //                    $('.hrDrug').val("");
                     $('.sleightOfHand').val("");
-                    //                    $('.ccTDrug').val("");
-                    //                    $('.hrTDrug').val("");
-                    //                    $('.ccIl').val("");
-                    //                    $('.hrIl').val("");
                     $('.nature').val("");
-                    //                    $('.feedingMethod').val("");
-                    //                    $("input[name='adLib']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='cueBased']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $('.fiCC').val("");
-                    //                    $('.hrCC').val("");
-                    //                    $('.feedingAttempts').val("");
-                    //                    $('.completedAttempts').val("");
-                    //                    $('.planOfCare').val("");
-                    //                    $('.socialConsiderations').val("");
                     $('.survival').val("");
-                    //                    $('.referalls').val("");
-                    //                    $("input[name='synagis']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='vaccine']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $('.pediatrician').val("");
-                    //                    $('.lastBath').val("");
-                    //                    $("input[name='consent']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $("input[name='husCP']:checked").attr({
-                    //                        checked: false
-                    //                    });
-                    //                    $('.cpDate').val("");
-                    //                    $('.cpTime').val("");
-                    //                    $('.phototherapyStartDate').val("");
-                    //                    $('.phototherapyEndDate').val("");
-                    //                    $('.phototherapySelect').val("");
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
@@ -1045,6 +923,7 @@ $('#form-submit-button').on('click', function (event) {
         }
         //else update the existing one
         else {
+            console.log("inside put", selectedEntryID);
             $.ajax({
                     type: 'PUT',
                     url: '/form/update/' + selectedEntryID,
@@ -1055,6 +934,7 @@ $('#form-submit-button').on('click', function (event) {
                 .done(function (result) {
                     alert("Entry Updated!");
                     getPreviousEntries(loggedInUser);
+                    $('.name-legend').text("Create a character");
                     $('.selected-entry-id').val("");
                     $("#form-delete-button").hide();
                     $('.selected-entry-id').val("");
