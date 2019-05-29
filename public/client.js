@@ -8,18 +8,21 @@ function getPreviousEntries(userId) {
         })
         //if call is succefull
         .done(function (result) {
-            let htmlOutput = "<option value=''>Add new entry</option>";
-            let formattedDataOutput = "";
-            for (i = 0; i < result.entries.length; i++) {
-                formattedDataOutput = result.entries[i].addedToDB;
-                let partsOfDataInput = formattedDataOutput.split('T');
-                let dataOutputOnly = partsOfDataInput[0];
-                let timeOutputOnly = partsOfDataInput[1];
-                let splitDataOutputOnly = dataOutputOnly.split('-');
-                let splitTimeOutputOnly = timeOutputOnly.split(':');
-                htmlOutput += '<option value="' + result.entries[i]._id + '">' + splitDataOutputOnly[1] + '/' + splitDataOutputOnly[2] + '/' + splitDataOutputOnly[0] + ' ' + splitTimeOutputOnly[0] + ':' + splitTimeOutputOnly[1] + '(UTC)  ' + result.entries[i].characterName + ' ' + result.entries[i].characterClass + '</option>';
+            console.log(result);
+            let htmlOutput = "";
+            for (let i = 0; i < result.entries.length; i++) {
+                htmlOutput += '<div class="input-wrapper character-name">';
+                htmlOutput += '<label for="character-name">';
+                htmlOutput += result.entries[i].characterName;
+                htmlOutput += ', Level ';
+                htmlOutput += result.entries[i].characterLevel
+                htmlOutput += ' ';
+                htmlOutput += result.entries[i].characterClass;
+                htmlOutput += '</label>';
+                htmlOutput += '</div>';
+
             }
-            $(".previous-entries-dropdown").html(htmlOutput);
+            $(".character-content").html(htmlOutput);
         })
         //if the call is failing
         .fail(function (jqXHR, error, errorThrown) {
