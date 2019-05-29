@@ -148,7 +148,6 @@ Header styles
 Content styles
 */
 
-.previous-entries-dropdown,
 .legend {
     text-align: center;
     padding-top: 5px;
@@ -233,6 +232,7 @@ Content styles
     margin-right: 3%;
     /*    border: solid 1px red;
     */
+    max-height: 386px;
 }
 
 .character-name {
@@ -282,26 +282,6 @@ Content styles
 
 .form-wrapper fieldset .icons-wrapper .icon-content span {
     margin-left: 1rem;
-}
-
-.depth-notes {
-    display: block;
-    width: 100%;
-    border: 1px solid gray;
-    font-family: sans-serif;
-}
-
-.legend-show button,
-.legend-hide button {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 12px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 16px;
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 5px;
 }
 
 .fixed-cta {
@@ -379,6 +359,10 @@ button:hover {
     transition: all 0.4s ease 0s;
 }
 
+.character-name-button {
+    font-family: inherit;
+    color: green;
+    background-color: black;
 }
 
 #form-submit-button,
@@ -436,8 +420,6 @@ button:hover {
     vertical-align: top;
 
 }
-
-#absoluteCenteredDiv {}
 
 #full-form {
     border: red;
