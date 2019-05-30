@@ -34,14 +34,6 @@ header {
 
 }
 
-/*
-.greyText::placeholder {
-    color: black !important;
-}
-*/
-
-
-
 h1 {
     margin: 5px;
     padding: 5px;
@@ -228,6 +220,10 @@ Content styles
     margin-top: 1rem;
 }
 
+option {
+    color: black;
+}
+
 .dice-wrapper,
 .character-wrapper {
     padding: 10px;
@@ -290,34 +286,12 @@ Content styles
     margin-left: 1rem;
 }
 
-.fixed-cta {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 10000;
-    margin: 0;
-    background-color: white;
-    opacity: 0.9;
-}
-
-.fixed-cta fieldset {
-    border: 0;
-    border-top: 1px solid black;
-}
-
-.last-wrapper {
-    margin-bottom: 200px;
-}
-
-
 .authentication-box {
     margin: 2rem auto;
     padding: 0px 0px 70px 0px;
     display: block;
     margin-bottom: 10px;
 }
-
 
 p {
     margin-top: 10px;
@@ -367,7 +341,7 @@ button:hover {
 
 .character-name-button {
     font-family: inherit;
-    color: green;
+    color: moccasin;
     background-color: black;
 }
 
@@ -413,8 +387,7 @@ button:hover {
 }
 
 .button:hover,
-.submit-button:hover,
-.select-previous-entries-button:hover {
+.submit-button:hover {
 
     color: white;
 }

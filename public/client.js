@@ -298,7 +298,7 @@ $('#form-delete-button').on('click', function (event) {
         })
         //if call is succefull
         .done(function (result) {
-            alert("Entry Deleted!");
+            alert("Character Deleted!");
             $('.name-legend').text("Create a character");
             getPreviousEntries(loggedInUser);
             $('.selected-entry-id').val("");
@@ -501,7 +501,7 @@ $('#form-submit-button').on('click', function (event) {
                     contentType: 'application/json'
                 })
                 .done(function (result) {
-                    alert("Entry Updated!");
+                    alert("Character Updated!");
                     getPreviousEntries(loggedInUser);
                     $('.name-legend').text("Create a character");
                     $('.selected-entry-id').val("");
