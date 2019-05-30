@@ -34,9 +34,11 @@ header {
 
 }
 
+/*
 .greyText::placeholder {
     color: black !important;
 }
+*/
 
 
 
@@ -50,6 +52,10 @@ h2 {
     padding-left: 5px;
     height: 90px;
     overflow: hidden;
+}
+
+input {
+    color: black;
 }
 
 input::placeholder {

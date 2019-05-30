@@ -21,12 +21,6 @@ app.use(express.static('public'));
 mongoose.Promise = global.Promise;
 
 
-//app.get('/', function (req, res) {
-//    res.sendFile(__dirname + '/public/index.html');
-//});
-
-
-
 // ---------------- RUN/CLOSE SERVER -----------------------------------------------------
 let server;
 
