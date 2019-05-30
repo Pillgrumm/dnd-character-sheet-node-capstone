@@ -30,7 +30,7 @@ Landing Page/Login Page ![Landing Page](public/github-images/landing-page.JPG)
 
   **Character Page**
 
-  As a user, I will be able to see the left hand table which holds prexisting character names. (if existing).
+  As a user, I will be able to see the bottom-right hand table which holds prexisting character names. (if existing).
 
   As a user, I will be able to click/select a character name, doing so I will see the every field populated based on the previous entries for that character.
 

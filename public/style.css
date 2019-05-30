@@ -54,6 +54,10 @@ input::placeholder {
     color: #eeee;
 }
 
+.greyText::placeholder {
+    color: grey;
+}
+
 input[type='checkbox'],
 input[type='radio'] {
     margin-left: 2rem;
@@ -358,6 +362,7 @@ button:hover {
 
 #form-delete-button {
     float: right;
+
 }
 
 .dice-value {
