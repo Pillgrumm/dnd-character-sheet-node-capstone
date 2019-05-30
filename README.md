@@ -9,6 +9,16 @@ Description Here
 
 Landing Page/Login Page ![Landing Page](public/github-images/landing-page.JPG)
 
+Registration Page ![Registration Page](public/github-images/registration-page.JPG)
+
+Main Page (No Character Selection) ![Registration Page](public/github-images/main-page-no-character.JPG)
+
+Main Page (Character Selected) ![Registration Page](public/github-images/main-page-character.JPG)
+
+Lower Content ![Registration Page](public/github-images/bottom-content.JPG)
+
+Dice Rolled ![Registration Page](public/github-images/dice-rolled.JPG)
+
 ## User Stories
 **Landing Page**
 
