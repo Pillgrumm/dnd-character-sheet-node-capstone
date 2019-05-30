@@ -17,7 +17,7 @@ Main Page (Character Selected) ![Registration Page](public/github-images/main-pa
 
 Lower Content ![Registration Page](public/github-images/bottom-content.JPG)
 
-Dice Rolled ![Registration Page](public/github-images/dice-rolled.JPG)
+Dice Rolled ![Registration Page](public/github-images/rolled-dice.JPG)
 
 ## User Stories
 **Landing Page**
