@@ -3,7 +3,7 @@ Live Preview with react @ https://dnd-character-sheet-react.herokuapp.com/
 
 Live Preview with Node https://dnd-character-sheet-node.herokuapp.com/
 
-Description Here
+Role Lodge will allow those who sign up to login and store character information for 'Dungeons and Dragons' sessions. I was inspired to make this because I was told it could be nice if the Dungeon Master could log in and see what the characters statistics are to set up more elabroate gameplay. The Dice Rolling function was also inspired because I have seen many people forget or misplace their dice when it comes time to have a DnD session.
 
 ## Screenshots
 
