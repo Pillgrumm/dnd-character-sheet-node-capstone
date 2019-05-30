@@ -7,7 +7,7 @@ Description Here
 
 ## Screenshots
 
-Landing Page/Login Page ![Landing Page](public/github-images/landing-page.jpg)
+Landing Page/Login Page ![Landing Page](public/github-images/landing-page.JPG)
 
 ## User Stories
 **Landing Page**
