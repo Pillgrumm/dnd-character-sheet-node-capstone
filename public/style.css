@@ -238,7 +238,7 @@ option {
     margin-right: 3%;
     /*    border: solid 1px red;
     */
-    max-height: 400px;
+    max-height: 430px;
 
 }
 
@@ -394,7 +394,6 @@ button:hover {
 
 .button:hover,
 .submit-button:hover {
-
     color: white;
 }
 

@@ -641,6 +641,14 @@ $("#d4").on("click", function () {
     $("#d4-value").append("You rolled: " + d4.dice.value + " ");
 });
 
+$("#reset").on("click", function () {
+    $("#d4-value").empty();
+    $("#d6-value").empty();
+    $("#d8-value").empty();
+    $("#d10-value").empty();
+    $("#d12-value").empty();
+    $("#d20-value").empty();
+});
 //let htmlImageOutput = "<img src='images/dice/dice-" + diceNumber + ".png' class='dice-image'>";
 
 //form trigger
