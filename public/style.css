@@ -323,7 +323,7 @@ p {
 .button,
 .submit-button {
     background: #462ecc;
-    padding: 10px 15px;
+    padding: 2% 4%;
     color: white !important;
     border-radius: 4px;
     border: #27ae60 1px solid;
@@ -348,12 +348,14 @@ button:hover {
     font-family: inherit;
     color: moccasin;
     background-color: black;
+    padding: 2% 4%;
 }
 
 #form-submit-button,
 #form-delete-button {
     height: 47px;
-    width: 200px;
+    width: 20%;
+    min-width: 50px;
 
 }
 
