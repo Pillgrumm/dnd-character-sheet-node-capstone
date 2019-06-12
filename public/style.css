@@ -28,11 +28,7 @@ body {
     background-color: black;
 }
 
-section,
-header {
-    /*    border: 1px solid red;*/
 
-}
 
 h1 {
     margin: 5px;
@@ -81,7 +77,6 @@ input[type='radio'] {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    border: solid red 1px;
 }
 
 /* -------------------------------------
@@ -402,13 +397,11 @@ button:hover {
 .bottom-content > div {
     width: 49%;
     display: inline-block;
-    /*    border: solid 1px pink;*/
     vertical-align: top;
 
 }
 
 #full-form {
-    border: red;
     background: url("/images/fighting-image-background.jpg") no-repeat center center;
     background-attachment: fixed;
     position: relative;
