@@ -147,9 +147,9 @@ $('#login').on('click', function (event) {
     const loginUsername = $('.loginUsername').val();
     const loginPassword = $('.loginPassword').val();
     if ((!loginUsername) || (loginUsername.length < 1) || (loginUsername.indexOf(' ') > 0)) {
-        alert('Invalid Email')
+        alert('Please enter an account name.')
     } else if ((!loginPassword) || (loginPassword.length < 1) || (loginPassword.indexOf(' ') > 0)) {
-        alert('Invalid password')
+        alert('Please enter a password.')
     } else {
         const loginObject = {
             username: loginUsername,
